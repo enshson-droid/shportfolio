@@ -1,0 +1,306 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NAVIMRO Mobile UI Portfolio · v12</title><meta name="description" content="나비엠알오 모바일 UI 현재 화면과 개선 제안을 비교하는 디자인 포트폴리오"><style>@font-face{font-family:"Pretendard Embedded";src:url("../assets/navimro-mobile/font-001.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+
+:root{--orange:#ff5b17;--dark:#151515;--ink:#242424;--muted:#666;--cream:#fff8f3;--pale:#f5f1ed;--line:#e6ded8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--dark);background:#fff;font-family:"Pretendard Embedded",sans-serif;word-break:keep-all}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:min(100% - 100px,1700px);margin:auto}.kicker{font-size:13px;font-weight:900;letter-spacing:0.3px;text-transform:uppercase;color:var(--orange);margin:0}.nav{height:72px;background:#fff;border-bottom:1px solid #ece7e2;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}.logo{font-size:27px;letter-spacing:0.3px;font-weight:950}.logo em{font-style:normal;color:var(--orange)}.nav-links{display:flex;align-items:center;gap:32px;font-size:13px;font-weight:800}.nav-links a:hover{color:var(--orange)}.nav-links .nav-button{background:var(--dark);color:#fff;padding:10px 17px;border-radius:100px}.nav-links .nav-button:hover{background:var(--orange);color:white}
+/* Cover: split editorial composition with the supplied photograph. */
+.cover{min-height:880px;background:#fff;position:relative;overflow:hidden}.cover-layout{min-height:880px;display:grid;grid-template-columns:44% 56%;align-items:stretch}.cover-copy{padding:112px 40px 90px 0;position:relative;z-index:2}.cover-copy .kicker{margin-bottom:42px}.cover h1{font-size:clamp(76px,6.6vw,126px);line-height:.99;letter-spacing:0.3px;margin:0 0 36px;font-weight:950}.cover h1 em{font-style:normal;color:var(--orange)}.cover-desc{font-size:20px;line-height:1.8;color:#5e5651;max-width:590px;margin:0}.cover-labels{display:flex;gap:8px;flex-wrap:wrap;margin-top:37px}.cover-labels span{border:1px solid #d8d0ca;border-radius:100px;padding:10px 15px;font-size:11px;font-weight:900;letter-spacing:0.3px}.cover-rule{position:absolute;bottom:85px;left:0;width:80%;border-top:1px solid var(--dark);padding-top:22px;font-size:12px;font-weight:900;letter-spacing:0.3px;display:flex;justify-content:space-between}.cover-art{background:var(--orange);position:relative;overflow:hidden;margin-right:calc((1700px - 100vw)/2)}.mockup-card{position:absolute;width:160%;left:-28%;top:-6%;transform:rotate(-8deg);filter:drop-shadow(0 34px 35px #70210052)}.mockup-card>img{width:100%;border-radius:35px}.mockup-screen{position:absolute;left:39.6%;top:10.3%;width:21.4%;height:77.2%;overflow:hidden;border-radius:8% / 4%;background:white}.mockup-screen img{width:100%;max-width:none}.mockup-screen:after{content:"";position:absolute;left:39%;top:0;width:22%;height:2%;background:#ededed;border-radius:0 0 10px 10px}.stage-title{position:absolute;left:7%;top:7%;font-size:14px;font-weight:900;color:white;letter-spacing:0.3px;z-index:2}.stage-type{position:absolute;right:-1%;bottom:-.18em;font-weight:950;font-size:clamp(150px,17vw,300px);letter-spacing:0.3px;color:#ffffff25;line-height:1;white-space:nowrap}.stage-index{position:absolute;bottom:38px;left:7%;z-index:2;color:#fff;font-weight:900;font-size:12px;letter-spacing:0.3px}
+/* Intro and visual journey, composed like portfolio spreads. */
+.statement{background:var(--dark);color:#fff;padding:135px 0}.statement-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:110px;align-items:end}.statement h2{font-size:clamp(56px,5.4vw,98px);line-height:1.13;letter-spacing:0.3px;margin:29px 0 0}.statement h2 em{font-style:normal;color:var(--orange)}.statement p:last-child{font-size:19px;line-height:1.9;color:#c5c1be;margin:0}.intent-row{margin-top:92px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #777}.intent-row div{padding:30px 35px 0 0;border-right:1px solid #4e4e4e}.intent-row div:last-child{border:0}.intent-row span{color:var(--orange);font-size:12px;font-weight:900;letter-spacing:0.3px}.intent-row strong{display:block;margin-top:17px;font-size:24px}.intent-row p{font-size:14px!important;color:#aaa!important;line-height:1.7!important;margin-top:9px!important}.journey{padding:125px 0 140px;background:var(--cream);overflow:hidden}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px}.section-heading h2{font-size:clamp(53px,4.8vw,88px);line-height:1.1;letter-spacing:0.3px;margin:13px 0 0}.section-heading p:last-child{font-size:16px;line-height:1.75;color:#716b66;max-width:440px;margin:0}.journey-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}.journey-item{background:#fff;border:1px solid #f0e7e0;padding:24px 18px 20px;position:relative;min-width:0;transition:transform .2s,box-shadow .2s}.journey-item:hover{transform:translateY(-8px);box-shadow:0 20px 35px #47230f19}.journey-item>span{display:block;font-size:11px;letter-spacing:0.3px;font-weight:900;color:var(--orange);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.journey-device{width:75%;height:360px;margin:20px auto 24px;background:#fff;overflow:hidden;border:6px solid #232323;border-radius:22px;box-shadow:0 15px 24px #0002}.journey-device img{width:100%;height:auto}.journey-item strong{display:block;font-size:18px;line-height:1.35;min-height:49px}.journey-item em{font-style:normal;position:absolute;right:18px;bottom:23px;color:var(--orange);font-size:20px}
+/* Component and color board. */
+.system{padding:140px 0;background:#f1ede9}.system-grid{display:grid;grid-template-columns:430px 1fr;gap:70px}.system h2{font-size:clamp(60px,5vw,94px);line-height:1.05;letter-spacing:0.3px;margin:25px 0}.system-desc{font-size:17px;line-height:1.8;color:#666;max-width:365px}.system-board{background:#fff;padding:46px;border-radius:6px;box-shadow:0 20px 50px #493a3014}.board-title{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:27px;font-size:12px;font-weight:900;letter-spacing:0.3px}.swatches{display:grid;grid-template-columns:1.25fr repeat(5,1fr);gap:8px}.swatch div{height:135px;background:var(--c)}.swatch:first-child div{height:175px;margin-top:-40px}.swatch strong{display:block;font-size:11px;margin-top:12px}.swatch small{display:block;color:#888;font-size:10px;margin-top:4px}.components{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:60px}.component-card{border-top:1px solid #ccc;padding-top:18px}.component-card small{display:block;color:#8b817b;font-size:11px;font-weight:900;letter-spacing:0.3px;margin-bottom:17px}.demo-search{border:1px solid #bbb;border-radius:100px;padding:13px 17px;color:#aaa;font-size:13px}.demo-search b{color:var(--orange);float:right}.demo-chips{display:flex;gap:6px;flex-wrap:wrap}.demo-chips span{padding:9px 11px;border:1px solid #d5d5d5;border-radius:30px;font-size:11px}.demo-chips span:first-child{color:var(--orange);border-color:var(--orange)}.demo-button{background:var(--orange);color:#fff;text-align:center;border-radius:8px;padding:13px;font-size:13px;font-weight:900}.demo-price{font-weight:950;font-size:32px;letter-spacing:0.3px;color:var(--orange)}.demo-price small{display:inline;font-size:13px;color:#888;letter-spacing:0.3px}
+/* Asymmetric before/after modules. */
+.feature{padding:140px 0;overflow:hidden}.feature-home,.feature-cart{background:#fff}.feature-search,.feature-checkout{background:#f8f5f1}.feature-option{background:#242424;color:white}.feature-grid{display:grid;grid-template-columns:38% 62%;gap:20px;align-items:center}.feature-copy{padding-right:55px;position:relative;z-index:2}.section-no{font-size:61px;font-weight:950;letter-spacing:0.3px;color:var(--orange)}.section-no b{font-size:18px;letter-spacing:0.3px;color:#a8a29e}.feature-copy .kicker{margin-top:55px}.feature h2{font-size:clamp(52px,4.3vw,80px);line-height:1.13;letter-spacing:0.3px;margin:20px 0 25px}.feature-lead{font-size:18px;line-height:1.8;color:#68615d;margin:0 0 46px}.change-title{border-top:2px solid currentColor;padding:18px 0;display:flex;justify-content:space-between;font-size:12px;font-weight:900;letter-spacing:0.3px}.change-title span{font-size:22px;line-height:.6}.feature ol{list-style:none;margin:0;padding:0}.feature li{display:flex;gap:20px;padding:17px 0;border-top:1px solid var(--line)}.feature li i{font-size:14px;font-weight:900;color:var(--orange);font-style:normal}.feature li strong{display:block;font-size:17px}.feature li span{display:block;font-size:14px;color:#817b77;line-height:1.5;margin-top:4px}.feature-caption{color:var(--orange);font-size:14px;font-weight:850;margin:32px 0 0}.feature-visual{height:840px;position:relative}.visual-ground{position:absolute;inset:65px 0 32px 80px;background:#fff0e7;border-radius:50% 0 0 50%}.feature-search .visual-ground,.feature-checkout .visual-ground{background:#ebe5df}.feature-option .visual-ground{background:#3a3735}.screen-tag{display:inline-flex;gap:8px;align-items:center;background:#252525;color:#fff;font-size:12px;font-weight:900;letter-spacing:0.3px;padding:10px 13px;margin-bottom:10px}.screen-tag small{font-size:10px;font-weight:700;letter-spacing:0.3px;color:#bbb}.tag-after{background:var(--orange)}.tag-after small{color:#fff}.device{padding:7px;background:#262626;border-radius:35px;box-shadow:0 32px 55px #0004}.device.proposed{background:#ff5b17}.device-screen{aspect-ratio:375 / 770;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#ff5b17 #eee;border-radius:28px;background:#fff}.device-screen img{width:100%;height:auto;max-width:none}.visual-index{position:absolute;right:8%;bottom:8px;font-size:11px;font-weight:900;letter-spacing:0.3px}.visual-index b{font-size:28px;color:var(--orange);margin-left:12px}.feature-option .feature-lead,.feature-option li span{color:#c5c0bd}.feature-option li{border-color:#514d4a}.feature-option .section-no b{color:#aaa}.feature-option .visual-index{color:white}
+.end{background:var(--orange);color:white;padding:150px 0}.end-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end}.end h2{font-size:clamp(62px,5.7vw,108px);line-height:1.08;letter-spacing:0.3px;margin:0}.end p{font-size:19px;line-height:1.8;margin:0}.footer{background:#161616;color:#aaa;padding:30px 0;font-size:12px;line-height:1.7}.footer .container{display:flex;justify-content:space-between;gap:30px}.footer a{color:white}
+@media(max-width:1350px){.container{width:min(100% - 60px,1700px)}.cover-layout{grid-template-columns:47% 53%}.cover h1{font-size:75px}.cover-art{margin-right:-30px}.feature-visual{height:700px}.system-grid{grid-template-columns:340px 1fr}.journey-device{height:290px}}
+@media(max-width:980px){.cover-layout{grid-template-columns:1fr}.cover{min-height:0}.cover-copy{padding:70px 0 65px}.cover-rule{position:static;margin-top:65px}.cover-art{height:600px;margin:0 -30px}.mockup-card{width:110%;left:-10%;top:5%}.statement-grid,.system-grid,.end-grid{grid-template-columns:1fr;gap:45px}.journey-row{grid-template-columns:repeat(5,240px);overflow-x:auto;padding-bottom:20px}.feature-grid{grid-template-columns:1fr}.feature-copy{max-width:690px}.feature-visual{margin-top:50px}.visual-ground{inset:35px 5% 20px 5%;border-radius:30px}}
+@media(max-width:620px){.container{width:min(100% - 32px,1700px)}.nav{height:60px}.logo{font-size:23px}.nav-links a:not(.nav-button){display:none}.nav-links .nav-button{font-size:11px}.cover-copy{padding:60px 0 40px}.cover-copy .kicker{margin-bottom:28px}.cover h1{font-size:clamp(54px,13vw,80px)}.cover-desc{font-size:16px}.cover-labels span{font-size:9px;padding:8px 10px}.cover-rule{font-size:10px;margin-top:45px;width:100%}.cover-art{height:410px;margin:0 -16px}.mockup-card{width:138%;left:-29%;top:12%}.stage-title,.stage-index{font-size:9px}.stage-type{font-size:45vw}.statement,.journey,.system,.feature,.end{padding:75px 0}.statement h2,.section-heading h2,.system h2,.feature h2,.end h2{font-size:45px}.statement p:last-child,.feature-lead,.end p{font-size:16px}.intent-row{grid-template-columns:1fr;gap:0;margin-top:45px}.intent-row div{border-right:0;border-bottom:1px solid #4e4e4e;padding:19px 0}.section-heading{display:block;margin-bottom:34px}.section-heading p:last-child{margin-top:18px;font-size:14px}.journey-row{grid-template-columns:repeat(5,190px);gap:9px}.journey-item{padding:17px 13px}.journey-device{height:230px}.journey-item strong{font-size:15px}.system-board{padding:25px 18px}.swatches{grid-template-columns:repeat(6,minmax(55px,1fr));overflow-x:auto}.swatch div{height:82px}.swatch:first-child div{height:102px;margin-top:-20px}.swatch strong,.swatch small{font-size:8px}.components{gap:12px;margin-top:36px}.component-card small{font-size:9px}.demo-search,.demo-button{font-size:10px}.demo-chips span{font-size:9px;padding:6px}.feature-copy{padding-right:0}.section-no{font-size:45px}.feature-copy .kicker{margin-top:30px}.feature-lead{margin-bottom:33px}.feature li strong{font-size:15px}.feature li span{font-size:12px}.feature-visual{height:480px;margin-top:35px}.device{padding:4px;border-radius:19px}.device-screen{border-radius:15px}.screen-tag{font-size:9px;padding:7px 9px}.screen-tag small{font-size:8px}.visual-index{font-size:8px}.end-grid{gap:30px}.footer .container{display:block}}
+
+/* v04: comparable screen sizes, shared top alignment, no tilt below the cover. */
+.feature-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);gap:64px;align-items:start}
+.feature-copy{padding-right:0;min-width:0}
+.feature-visual{height:auto;min-width:0;position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,390px));gap:24px 32px;justify-content:center;align-items:start;margin:0}
+.before-set,.after-set{position:static;width:100%;min-width:0;transform:none;margin:0}
+.screen-tag{height:37px;margin:0 0 16px;white-space:nowrap}
+.device{width:100%;padding:7px;box-shadow:0 18px 35px #00000018}
+.device.proposed{background:#262626}
+.device-screen{width:100%;aspect-ratio:375 / 770;overflow-y:auto;overscroll-behavior:contain}
+.visual-index{position:static;grid-column:1 / -1;text-align:right;padding-top:5px}
+.journey-item:hover{transform:none}
+@media(max-width:1350px){
+ .feature-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:40px}
+ .feature-visual{gap:22px}
+}
+@media(max-width:980px){
+ .feature-grid{grid-template-columns:minmax(0,1fr);gap:45px}
+ .feature-copy{max-width:690px}
+ .feature-visual{width:100%;margin:0;gap:24px}
+}
+@media(max-width:620px){
+ .feature-grid{gap:30px}
+ .feature-visual{height:auto;gap:18px 12px;margin:0}
+ .screen-tag{height:30px;padding:7px 8px;font-size:9px;gap:5px;margin-bottom:12px}
+ .screen-tag small{font-size:8px}
+ .device{padding:4px}
+}
+
+html,body,button,input,select,textarea{font-family:"Pretendard Embedded",sans-serif}
+body *{letter-spacing:0.3px}
+.hero-v05{position:relative;background:#ff6a22;width:100%;overflow:hidden}
+.hero-v05>img{display:block;width:100%;height:auto;max-width:none}
+.hero-v05-label{position:absolute;left:6.5%;top:7%;font-size:clamp(25px,3.7vw,70px);font-weight:850;color:white;line-height:1.2}
+.hero-v05-label span{display:block;font-size:clamp(10px,1vw,19px);font-weight:550;margin-top:15px}
+.intro-v05{padding:115px 0 120px;background:#fff8f3;text-align:center}
+.intro-v05 h1{font-size:clamp(36px,4.3vw,80px);font-weight:800;line-height:1.25;margin:25px 0 30px;color:#242424}
+.intro-v05-copy{font-size:21px;color:#6f5b4e;line-height:1.9;margin:0}
+.intro-v05-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:40px}
+.intro-v05-meta span{font-size:12px;color:#a44013;border:1px solid #f0c4ab;padding:11px 18px;border-radius:50px}
+@media(max-width:620px){.intro-v05{padding:65px 0}.intro-v05 h1{font-size:36px}.intro-v05-copy{font-size:16px}.intro-v05-copy br{display:none}.intro-v05-meta span{font-size:10px;padding:9px 12px}.hero-v05-label span{margin-top:7px}}
+
+/* v07: requested adjustments to the v05 composition. */
+.hero-v05{height:min(56.25vw,1080px)}
+.hero-v05>img{position:absolute;left:50%;top:0;transform:translateX(-50%);width:auto;height:100%;max-width:none;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.hero-v05>img.hero-gradient-edge{left:0;transform:none;width:100%;height:100%;mask-image:none}
+.hero-v05-label{left:6.5%;top:10%;font-size:clamp(40px,6.5vw,125px);line-height:1.06;font-weight:800;letter-spacing:0.3px}
+.journey-item{cursor:default;transition:none}
+.journey-item:hover{transform:none;box-shadow:none}
+.journey-device{height:432px}
+.feature-grid{grid-template-columns:minmax(0,1fr) 782px;gap:64px}
+.feature-visual{grid-template-columns:repeat(2,375px);gap:24px 32px}
+.before-set,.after-set{display:flex;flex-direction:column;align-items:center}
+.screen-tag{align-self:center}
+.device{box-sizing:border-box;width:375px;height:812px;aspect-ratio:375 / 812;flex:none}
+.device-screen{box-sizing:border-box;width:100%;height:100%;aspect-ratio:auto;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;scrollbar-width:none;-ms-overflow-style:none;touch-action:pan-y}
+.device-screen::-webkit-scrollbar{display:none;width:0;height:0}
+.device-screen:focus-visible{outline:2px solid #ff5b17;outline-offset:-3px}
+.floating-top{position:fixed;right:28px;bottom:28px;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:60px;height:60px;border-radius:50%;background:#252525;color:#fff;text-decoration:none;box-shadow:0 5px 20px #0003;font-size:11px;font-weight:700;border:1px solid #ffffff50}
+.floating-top span{font-size:23px;line-height:1}
+.floating-top:hover{background:#ff5b17}
+.floating-top:focus-visible{outline:3px solid #ff5b17;outline-offset:4px}
+@media(max-width:1350px){.feature-grid{grid-template-columns:1fr;gap:45px}.feature-copy{max-width:690px}.journey-device{height:348px}}
+@media(max-width:850px){.feature-visual{grid-template-columns:repeat(2,minmax(0,375px));gap:24px 16px}.device{width:100%;height:auto;aspect-ratio:375 / 812;display:flex;flex-direction:column}.device-screen{flex:1;min-height:0;height:auto}}
+@media(max-width:620px){.journey-device{height:276px}.hero-v05-label{font-size:clamp(28px,6.5vw,40px)}.feature-visual{gap:18px 12px}.floating-top{width:48px;height:48px;right:16px;bottom:16px}}
+
+
+/* v08: scoped visual revisions and full screen collection. */
+.hero-v05{background:radial-gradient(ellipse at 30% 2%,#ff671b 0%,#ff833c 35%,#ffcf9e 67%,#fffceb 100%)}
+.hero-v05>img.hero-gradient-edge{display:none}
+.hero-v05>img:not(.hero-gradient-edge){left:70%}
+.hero-v05-label{font-size:calc(clamp(40px,6.5vw,125px) - 4px)}
+.hero-description{font-size:21px;font-weight:500;line-height:1.85;letter-spacing:0.3px;margin:36px 0 0;color:#fff;max-width:510px;text-shadow:0 1px 5px #a43c1220}
+.journey-item{background:transparent;border-color:transparent;box-shadow:none}
+.system{background:#fff}
+.swatch:first-child div{height:135px;margin-top:0}
+html{scrollbar-gutter:stable}
+html.phone-scroll-active{overflow:hidden!important;overscroll-behavior:none}
+html.phone-scroll-active body{overscroll-behavior:none}
+.all-ui{padding:130px 0;background:#fff8f3}
+.all-ui-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:65px 40px;align-items:start}
+.all-ui-card{margin:0;min-width:0}
+.all-ui-card figcaption{display:flex;align-items:center;gap:14px;font-size:19px;font-weight:700;margin:0 0 20px}
+.all-ui-card figcaption span{font-size:12px;color:#ff5b17;font-weight:800}
+.all-ui-card .device{width:100%;max-width:375px;height:auto;aspect-ratio:375 / 812;display:flex;flex-direction:column;margin:auto}
+.all-ui-card .device-screen{flex:1;min-height:0;height:auto}
+@media(max-width:1350px){.all-ui-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:50px 28px}}
+@media(max-width:980px){.hero-description{font-size:16px;margin-top:20px;max-width:340px}.all-ui-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.hero-v05-label{font-size:calc(clamp(28px,6.5vw,40px) - 4px)}.hero-description{font-size:10px;line-height:1.65;margin-top:10px;max-width:195px}.swatch:first-child div{height:82px;margin-top:0}.all-ui{padding:75px 0}.all-ui-grid{gap:35px 12px}.all-ui-card figcaption{font-size:13px;gap:8px;margin-bottom:12px}.all-ui-card figcaption span{font-size:10px}}
+
+/* v09: original capture restoration and uniform phone proportions. */
+.hero-v05{background:linear-gradient(180deg,#fa7228 0%,#fd7127 5%,#fd732d 10%,#fd7b35 15%,#fd8441 20%,#fc8e55 25%,#fd9864 30%,#fca476 35%,#fcb289 40%,#fcbb97 45%,#fdc7a7 50%,#fcd3b7 55%,#fcdec3 60%,#fde7ce 65%,#fdeed8 70%,#fdf1df 75%,#fdf6e6 80%,#fcf8e9 85%,#fdfaed 90%,#fdfaed 95%,#fdfbee 100%)}
+.hero-v05>img:not(.hero-gradient-edge){left:calc(70% - 10px)}
+.journey-item{text-align:center}
+.system-board{box-shadow:none}
+.component-card{border-top:0}
+.device{width:375px;height:760px;aspect-ratio:375 / 760;box-sizing:border-box;display:flex;flex-direction:column}
+.device-screen{height:auto;min-height:0;flex:1;overscroll-behavior:none;touch-action:none;overflow-anchor:none;scroll-behavior:auto}
+.device-screen img{display:block;flex:none;user-select:none;-webkit-user-drag:none}
+.journey-device{height:auto;aspect-ratio:375 / 760}
+.all-ui-card .device{width:100%;max-width:375px;height:auto;aspect-ratio:375 / 760}
+#screen-02 .current .device-screen{background:#fff}
+#screen-02 .current .device-screen img{width:100%;height:100%;object-fit:contain;object-position:center;box-sizing:border-box;padding:8px 0}
+html.phone-scroll-active,html.phone-scroll-active body{overflow:hidden!important;overscroll-behavior:none!important}
+@media(max-width:850px){.device{width:100%;height:auto;aspect-ratio:375 / 760}}
+
+/* v11: remove the divider left of DECIDE; one scroll target per gesture. */
+#overview .intent-row>div:first-child{border-right:0}
+#overview .intent-row>div:nth-child(2){border-left:0}
+html,body{scroll-behavior:auto!important;overflow-anchor:none}
+.device-screen{overflow:hidden!important;overscroll-behavior:none!important;touch-action:none;scroll-behavior:auto!important}
+
+/* v12: narrower copy columns; phone positions and scrolling unchanged. */
+.feature-copy{width:80%;justify-self:start}
+@media(max-width:1350px){.feature-copy{max-width:552px}}
+</style><!-- Embedded font license:
+Copyright (c) 2021, Kil Hyung-jin (https://github.com/orioncactus/pretendard),
+with Reserved Font Name Pretendard JP.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+—————————————————————————————-
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+—————————————————————————————-
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting — in part or in whole — any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+--></head><body><header class="container nav"><a class="logo" href="#top">NAV<em>IMRO</em></a><nav class="nav-links"><a href="#overview">프로젝트</a><a href="#journey">화면 구성</a><a href="#system">디자인 시스템</a><a class="nav-button" href="#screen-01">비교 보기 ↗</a></nav></header><main id="top">
+<section class="hero-v05" aria-label="오렌지 모바일 목업"><img class="hero-gradient-edge" aria-hidden="true" src="../assets/navimro-mobile/image-001.png" width="1484" height="1060" alt=""><img src="../assets/navimro-mobile/image-001.png" width="1484" height="1060" alt="오렌지 배경의 두 휴대폰 목업에 배치된 나비엠알오 홈 UI"><div class="hero-v05-label">Mobile<br>Re:design.<p class="hero-description">상품을 찾는 순간부터 주문을 마칠 때까지.<br>더 쉽고 명확한 구매 경험을 위한<br>나비엠알오 모바일 UI 리디자인.</p></div></section>
+<section class="intro-v05"><div class="container"><p class="kicker">MOBILE COMMERCE / UI REDESIGN</p><h1>모바일에서 더 쉽게 구매하다!</h1><p class="intro-v05-copy">상품을 찾고, 규격을 고르고, 주문을 마치는 순간까지.<br>나비엠알오의 현재 모바일 화면과 개선 UI를 비교하며<br>구매 흐름을 더 쉽게 이해할 수 있도록 디자인했습니다.</p><div class="intro-v05-meta"><span>BEFORE / AFTER</span><span>05 KEY SCREENS</span><span>2026 MOBILE EXPERIENCE</span></div></div></section>
+<section class="statement" id="overview"><div class="container"><div class="statement-grid"><div><p class="kicker">01 / DESIGN INTENT</p><h2>작은 화면에는<br><em>분명한 순서</em>가<br>필요합니다.</h2></div><p>모바일 구매에서는 한 번에 보이는 정보가 적습니다. 그래서 이 제안은 각 화면에 더 많은 요소를 넣기보다, 지금 고를 것과 다음에 확인할 것을 먼저 보이게 합니다. 현재 화면과 개선 화면을 같은 단계에서 비교해 변화의 위치를 확인할 수 있도록 구성했습니다.</p></div><div class="intent-row"><div><span>FIND</span><strong>찾는 화면</strong><p>검색과 카테고리의 시작점을 구분합니다.</p></div><div><span>DECIDE</span><strong>고르는 화면</strong><p>규격·수량·금액을 함께 비교합니다.</p></div><div><span>COMPLETE</span><strong>마치는 화면</strong><p>주문과 결제 조건을 마지막까지 연결합니다.</p></div></div></div></section>
+<section class="journey" id="journey"><div class="container"><div class="section-heading"><div><p class="kicker">02 / SCREEN JOURNEY</p><h2>5개의 화면,<br>하나의 구매 흐름.</h2></div><p>개선 화면을 먼저 한 줄로 훑어본 뒤, 아래에서 현재 화면과 단계별로 비교할 수 있습니다.</p></div><div class="journey-row"><div class="journey-item"><span>01 / HOME / FIND</span><div class="journey-device"><img src="../assets/navimro-mobile/image-001.svg" alt="찾는 방법부터 다시 보여주다 개선 화면" loading="lazy"></div><strong>찾는 방법부터 다시 보여주다</strong></div><div class="journey-item"><span>02 / SEARCH / EXPLORE</span><div class="journey-device"><img src="../assets/navimro-mobile/image-002.svg" alt="검색어가 없어도 길을 잃지 않게 개선 화면" loading="lazy"></div><strong>검색어가 없어도 길을 잃지 않게</strong></div><div class="journey-item"><span>03 / OPTION / DECIDE</span><div class="journey-device"><img src="../assets/navimro-mobile/image-003.svg" alt="옵션 선택을 한 화면에서 끝내다 개선 화면" loading="lazy"></div><strong>옵션 선택을 한 화면에서 끝내다</strong></div><div class="journey-item"><span>04 / CART / REVIEW</span><div class="journey-device"><img src="../assets/navimro-mobile/image-004.svg" alt="담은 상품을 주문 정보로 연결하다 개선 화면" loading="lazy"></div><strong>담은 상품을 주문 정보로 연결하다</strong></div><div class="journey-item"><span>05 / CHECKOUT / COMPLETE</span><div class="journey-device"><img src="../assets/navimro-mobile/image-005.svg" alt="결제 직전 필요한 조건을 먼저 읽다 개선 화면" loading="lazy"></div><strong>결제 직전 필요한 조건을 먼저 읽다</strong></div></div></div></section>
+<section class="system" id="system"><div class="container system-grid"><div><p class="kicker">03 / DESIGN SYSTEM</p><h2>강조할 곳에<br>오렌지.</h2><p class="system-desc">레퍼런스의 디자인 시스템 보드처럼 색상과 실제 UI 요소를 한 화면에서 함께 보여줍니다. 오렌지는 선택 상태와 주요 행동에 쓰고, 나머지 정보는 검정과 따뜻한 무채색으로 정리했습니다.</p></div><div class="system-board"><div class="board-title"><span>COLOR PALETTE</span><span>NAVIMRO / MOBILE</span></div><div class="swatches"><div class="swatch"><div style="--c:#ff5b17"></div><strong>PRIMARY</strong><small>#FF5B17</small></div><div class="swatch"><div style="--c:#151515"></div><strong>INK</strong><small>#151515</small></div><div class="swatch"><div style="--c:#666666"></div><strong>GRAY</strong><small>#666666</small></div><div class="swatch"><div style="--c:#b7b7b7"></div><strong>LINE</strong><small>#B7B7B7</small></div><div class="swatch"><div style="--c:#f5f1ed"></div><strong>SOFT</strong><small>#F5F1ED</small></div><div class="swatch"><div style="--c:#fff8f3"></div><strong>WARM</strong><small>#FFF8F3</small></div></div><div class="components"><div class="component-card"><small>SEARCH / ENTRY</small><div class="demo-search">상품명, 상품코드, 규격 검색 <b>⌕</b></div></div><div class="component-card"><small>FILTER / SELECTED</small><div class="demo-chips"><span>전체</span><span>2.5mm</span><span>3mm</span><span>4mm</span></div></div><div class="component-card"><small>PRIMARY ACTION</small><div class="demo-button">옵션 선택하기 →</div></div><div class="component-card"><small>PRICE / EMPHASIS</small><div class="demo-price">22,870<small>원 · VAT 포함</small></div></div></div></div></div></section>
+<div id="comparison"><section class="feature feature-home" id="screen-01"><div class="container feature-grid">
+      <div class="feature-copy"><span class="section-no">01 <b>/ 05</b></span><p class="kicker">HOME / FIND</p><h2>찾는 방법부터<br>다시 보여주다</h2><p class="feature-lead">배너와 메뉴를 지나 상품을 찾던 화면에서, 검색·카테고리·빠른 주문이 첫 선택지가 되는 화면으로 바꿨습니다.</p><div class="change-title">DESIGN CHANGES</div><ol><li><i>01</i><div><strong>찾기</strong><span>검색창을 가장 먼저 만나는 위치에 고정</span></div></li><li><i>02</i><div><strong>탐색</strong><span>목적별 카테고리와 빠른 경로를 구분</span></div></li><li><i>03</i><div><strong>선택</strong><span>상품 카드가 이어지는 순서를 정리</span></div></li></ol><p class="feature-caption">상품을 찾는 시작점이 더 선명하게 보이도록</p></div>
+      <div class="feature-visual"><div class="before-set"><span class="screen-tag">BEFORE <small>현재 UI</small></span><div class="device current"><div class="device-screen"><img src="../assets/navimro-mobile/image-001.jpg" alt="현재 home 모바일 화면" loading="lazy"></div></div></div><div class="after-set"><span class="screen-tag tag-after">AFTER <small>개선 UI 제안</small></span><div class="device proposed"><div class="device-screen"><img src="../assets/navimro-mobile/image-001.svg" alt="개선 home 모바일 화면" loading="lazy"></div></div></div><div class="visual-index">NAVIMRO / MOBILE UI <b>01</b></div></div>
+    </div></section><section class="feature feature-search" id="screen-02"><div class="container feature-grid">
+      <div class="feature-copy"><span class="section-no">02 <b>/ 05</b></span><p class="kicker">SEARCH / EXPLORE</p><h2>검색어가 없어도<br>길을 잃지 않게</h2><p class="feature-lead">검색창과 최근 검색어만 있던 진입 화면에, 자주 찾는 카테고리와 빠른 탐색 경로를 더했습니다.</p><div class="change-title">DESIGN CHANGES</div><ol><li><i>01</i><div><strong>재검색</strong><span>최근 검색을 한 묶음으로 정리</span></div></li><li><i>02</i><div><strong>발견</strong><span>카테고리에서 다시 출발할 수 있게</span></div></li><li><i>03</i><div><strong>초점</strong><span>입력과 추천의 역할을 분리</span></div></li></ol><p class="feature-caption">검색 전에도 다음 행동을 고를 수 있도록</p></div>
+      <div class="feature-visual"><div class="before-set"><span class="screen-tag">BEFORE <small>현재 UI</small></span><div class="device current"><div class="device-screen"><img src="../assets/navimro-mobile/image-002.jpg" alt="현재 search 모바일 화면" loading="lazy"></div></div></div><div class="after-set"><span class="screen-tag tag-after">AFTER <small>개선 UI 제안</small></span><div class="device proposed"><div class="device-screen"><img src="../assets/navimro-mobile/image-002.svg" alt="개선 search 모바일 화면" loading="lazy"></div></div></div><div class="visual-index">NAVIMRO / MOBILE UI <b>02</b></div></div>
+    </div></section><section class="feature feature-option" id="screen-03"><div class="container feature-grid">
+      <div class="feature-copy"><span class="section-no">03 <b>/ 05</b></span><p class="kicker">OPTION / DECIDE</p><h2>옵션 선택을<br>한 화면에서 끝내다</h2><p class="feature-lead">규격을 차례로 펼쳐 고르던 방식에서, 가능한 옵션과 수량·가격·합계를 함께 비교하는 화면으로 전환했습니다.</p><div class="change-title">DESIGN CHANGES</div><ol><li><i>01</i><div><strong>조건</strong><span>규격 필터와 결과를 한 패널에</span></div></li><li><i>02</i><div><strong>비교</strong><span>옵션별 수량과 가격을 나란히</span></div></li><li><i>03</i><div><strong>확인</strong><span>선택 수와 합계를 하단에 표시</span></div></li></ol><p class="feature-caption">복수 규격을 고를 때 확인 왕복을 줄이는 방향</p></div>
+      <div class="feature-visual"><div class="before-set"><span class="screen-tag">BEFORE <small>현재 UI</small></span><div class="device current"><div class="device-screen"><img src="../assets/navimro-mobile/image-003.jpg" alt="현재 option 모바일 화면" loading="lazy"></div></div></div><div class="after-set"><span class="screen-tag tag-after">AFTER <small>개선 UI 제안</small></span><div class="device proposed"><div class="device-screen"><img src="../assets/navimro-mobile/image-003.svg" alt="개선 option 모바일 화면" loading="lazy"></div></div></div><div class="visual-index">NAVIMRO / MOBILE UI <b>03</b></div></div>
+    </div></section><section class="feature feature-cart" id="screen-04"><div class="container feature-grid">
+      <div class="feature-copy"><span class="section-no">04 <b>/ 05</b></span><p class="kicker">CART / REVIEW</p><h2>담은 상품을<br>주문 정보로 연결하다</h2><p class="feature-lead">선택 상품이 길게 이어지는 장바구니를 카드 단위로 정리하고, 옵션·수량·금액을 주문 직전까지 이어 보이게 했습니다.</p><div class="change-title">DESIGN CHANGES</div><ol><li><i>01</i><div><strong>선택</strong><span>담은 상품과 선택 상태를 구분</span></div></li><li><i>02</i><div><strong>정보</strong><span>규격·수량·가격의 순서를 통일</span></div></li><li><i>03</i><div><strong>주문</strong><span>합계와 다음 버튼을 한곳에</span></div></li></ol><p class="feature-caption">무엇을 결제할지 계속 확인할 수 있도록</p></div>
+      <div class="feature-visual"><div class="before-set"><span class="screen-tag">BEFORE <small>현재 UI</small></span><div class="device current"><div class="device-screen"><img src="../assets/navimro-mobile/image-004.jpg" alt="현재 cart 모바일 화면" loading="lazy"></div></div></div><div class="after-set"><span class="screen-tag tag-after">AFTER <small>개선 UI 제안</small></span><div class="device proposed"><div class="device-screen"><img src="../assets/navimro-mobile/image-004.svg" alt="개선 cart 모바일 화면" loading="lazy"></div></div></div><div class="visual-index">NAVIMRO / MOBILE UI <b>04</b></div></div>
+    </div></section><section class="feature feature-checkout" id="screen-05"><div class="container feature-grid">
+      <div class="feature-copy"><span class="section-no">05 <b>/ 05</b></span><p class="kicker">CHECKOUT / COMPLETE</p><h2>결제 직전 필요한<br>조건을 먼저 읽다</h2><p class="feature-lead">긴 주문 화면에서 배송·상품·결제·증빙 조건을 다시 찾아야 했던 흐름을 단계별 카드와 마지막 확인 영역으로 정리했습니다.</p><div class="change-title">DESIGN CHANGES</div><ol><li><i>01</i><div><strong>배송</strong><span>배송지와 상품 정보를 분리</span></div></li><li><i>02</i><div><strong>결제</strong><span>수단과 입금 안내를 함께</span></div></li><li><i>03</i><div><strong>완료</strong><span>최종 금액과 주문 행동을 명확히</span></div></li></ol><p class="feature-caption">업무용 구매에서 다시 찾는 정보를 줄이도록</p></div>
+      <div class="feature-visual"><div class="before-set"><span class="screen-tag">BEFORE <small>현재 UI</small></span><div class="device current"><div class="device-screen"><img src="../assets/navimro-mobile/image-005.jpg" alt="현재 checkout 모바일 화면" loading="lazy"></div></div></div><div class="after-set"><span class="screen-tag tag-after">AFTER <small>개선 UI 제안</small></span><div class="device proposed"><div class="device-screen"><img src="../assets/navimro-mobile/image-005.svg" alt="개선 checkout 모바일 화면" loading="lazy"></div></div></div><div class="visual-index">NAVIMRO / MOBILE UI <b>05</b></div></div>
+    </div></section></div><section class="all-ui" id="all-ui"><div class="container"><div class="section-heading"><div><p class="kicker">04 / ALL MOBILE SCREENS</p><h2>모바일 UI,<br>전체 화면을 한눈에.</h2></div><p>탐색부터 주문 이후까지 이어지는 14개의 개선 화면입니다.<br>각 모바일 화면 안에서 스크롤해 전체 내용을 볼 수 있습니다.</p></div><div class="all-ui-grid"><figure class="all-ui-card"><figcaption><span>01</span>홈</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-001.svg" alt="홈 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>02</span>검색</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-002.svg" alt="검색 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>03</span>검색 결과</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-006.svg" alt="검색 결과 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>04</span>카테고리</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-007.svg" alt="카테고리 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>05</span>다중 옵션 상품 상세</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-008.svg" alt="다중 옵션 상품 상세 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>06</span>옵션 선택</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-003.svg" alt="옵션 선택 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>07</span>장바구니</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-004.svg" alt="장바구니 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>08</span>상품 상세</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-009.svg" alt="상품 상세 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>09</span>주문 / 결제</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-005.svg" alt="주문 / 결제 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>10</span>주문 완료</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-010.svg" alt="주문 완료 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>11</span>마이페이지</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-011.svg" alt="마이페이지 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>12</span>주문 / 배송 조회</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-012.svg" alt="주문 / 배송 조회 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>13</span>증빙 서류</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-013.svg" alt="증빙 서류 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure><figure class="all-ui-card"><figcaption><span>14</span>주문 상세</figcaption><div class="device"><div class="device-screen"><img src="../assets/navimro-mobile/image-014.svg" alt="주문 상세 개선 모바일 UI" loading="lazy" draggable="false"></div></div></figure></div></div></section><section class="end"><div class="container end-grid"><h2>보이는 순서가<br>달라지면,<br>선택도 쉬워집니다.</h2><p>이 화면들은 모바일 구매 흐름을 개선하기 위한 UI 제안입니다. 효과를 수치로 검증한 결과가 아니며, 실제 사용성은 고객 관찰과 서비스 적용 후 확인이 필요합니다.</p></div></section></main><footer class="footer"><div class="container"><div>NAVIMRO MOBILE UI PORTFOLIO</div></div></footer><a class="floating-top" href="#top" aria-label="페이지 맨 위로"><span aria-hidden="true">↑</span>TOP</a><script>(() => {
+  const screens = [...document.querySelectorAll('.device-screen')];
+  const locate = target => target instanceof Element ? target.closest('.device-screen') : null;
+  let wheelOwner = null;
+  let lastWheel = -Infinity;
+  let touchOwner = null;
+  let touchY = null;
+  const movePhone = (screen, delta) => {
+    const limit = Math.max(0, screen.scrollHeight - screen.clientHeight);
+    screen.scrollTop = Math.max(0, Math.min(limit, screen.scrollTop + delta));
+  };
+  screens.forEach(screen => {
+    screen.tabIndex = 0;
+    screen.setAttribute('role', 'region');
+    screen.setAttribute('aria-label', (screen.querySelector('img')?.alt || '모바일 화면') + ' 내부 스크롤');
+  });
+  // Exactly one scroll owner per wheel gesture. There is no native nested scrolling.
+  window.addEventListener('wheel', event => {
+    if (event.ctrlKey) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const now = performance.now();
+    const underPointer = locate(event.target);
+    // Keep momentum inside its original phone, including at its top/bottom edge.
+    if (now - lastWheel > 180 || wheelOwner === null) wheelOwner = underPointer;
+    lastWheel = now;
+    const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? (wheelOwner?.clientHeight || window.innerHeight) : 1;
+    if (wheelOwner) {
+      movePhone(wheelOwner, event.deltaY * unit);
+    } else {
+      window.scrollBy({top:event.deltaY * unit, left:0, behavior:'instant'});
+    }
+  }, {capture:true, passive:false});
+  window.addEventListener('touchstart', event => {
+    touchOwner = event.touches.length === 1 ? locate(event.target) : null;
+    touchY = touchOwner ? event.touches[0].clientY : null;
+  }, {capture:true, passive:true});
+  window.addEventListener('touchmove', event => {
+    if (!touchOwner || touchY === null || event.touches.length !== 1) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const y = event.touches[0].clientY;
+    movePhone(touchOwner, touchY - y);
+    touchY = y;
+  }, {capture:true, passive:false});
+  const releaseTouch = () => {touchOwner=null;touchY=null;};
+  window.addEventListener('touchend',releaseTouch,{passive:true});
+  window.addEventListener('touchcancel',releaseTouch,{passive:true});
+  window.addEventListener('blur',() => {releaseTouch();wheelOwner=null;lastWheel=-Infinity;});
+  window.addEventListener('keydown',event => {
+    const screen = locate(document.activeElement);
+    if (!screen || !['ArrowDown','ArrowUp','PageDown','PageUp',' ','Home','End'].includes(event.key)) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    const steps={ArrowDown:40,ArrowUp:-40,PageDown:screen.clientHeight,PageUp:-screen.clientHeight,' ':screen.clientHeight*(event.shiftKey?-1:1),Home:-screen.scrollHeight,End:screen.scrollHeight};
+    movePhone(screen,steps[event.key]);
+  },{capture:true});
+})();
+</script></body></html>
