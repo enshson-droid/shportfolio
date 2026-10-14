@@ -1,0 +1,236 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>나비엠알오 · 나비페이 기획 포트폴리오 v08</title><style>@font-face{font-family:PretendardJP;src:url(../assets/fonts/font-bc47e34e10121f5464c7.woff2) format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@charset "UTF-8";
+:root{--orange:#FF5B17;--ink:#191B20;--muted:#78808a}
+*{box-sizing:border-box}body{margin:0;background:#edf0f2;color:var(--ink);font-family:PretendardJP,sans-serif}
+header{position:relative;isolation:isolate;overflow:hidden;background:#17191d;color:#fff;min-height:450px;display:flex;flex-direction:column;justify-content:center;padding:90px max(30px,calc((100vw - 1580px)/2)) 95px}
+.hero-art{position:absolute;z-index:1;right:max(65px,calc((100vw - 1580px)/2 + 100px));top:50%;width:350px;height:250px;transform:translateY(-50%)}
+.hero-back{position:absolute;top:30px;left:35px;width:305px;height:190px;border-radius:22px;background:#343944;transform:rotate(9deg);box-shadow:0 22px 35px #0005}
+.hero-card{position:absolute;top:20px;left:5px;width:315px;height:200px;border-radius:22px;background:linear-gradient(140deg,#ff9357,#ff5b17 62%,#e04712);transform:rotate(-8deg);box-shadow:0 25px 45px #0006;overflow:hidden}
+.hero-card:before{content:'';position:absolute;width:235px;height:235px;border:1px solid #ffffff45;border-radius:50%;right:-55px;top:-115px;box-shadow:0 0 0 30px #ffffff10,0 0 0 65px #ffffff0b}
+.card-brand{position:absolute;top:24px;left:28px;color:white;font-size:24px;font-weight:900;letter-spacing:-.06em}.card-brand span{color:#ffe8d9}
+.card-chip{position:absolute;top:83px;left:30px;width:36px;height:27px;border-radius:6px;background:#ffd7b0;border:2px solid #fff3;box-shadow:inset 0 0 0 1px #dc9b6a}
+.card-chip:before,.card-chip:after{content:'';position:absolute;top:0;bottom:0;width:1px;background:#d09a72}.card-chip:before{left:11px}.card-chip:after{right:11px}
+.card-waves{position:absolute;top:72px;right:30px;color:#fff;font-size:26px;font-weight:700;letter-spacing:2px;transform:rotate(90deg);opacity:.9}
+.card-dots{position:absolute;left:29px;bottom:26px;color:white;font-size:18px;font-weight:700;letter-spacing:.12em;white-space:nowrap}
+header>.eyebrow,header>h1,header>p,header>.meta{position:relative;z-index:2}header>h1{max-width:800px}
+@media(max-width:900px){.hero-art{right:-25px;opacity:.25;transform:translateY(-50%) scale(.8);transform-origin:right center}}
+.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:700;color:#ff9b70}
+h1{font-size:46px;letter-spacing:-.06em;line-height:1.1;margin:16px 0 13px}
+header p{font-size:14px;color:#c2c6ca;margin:0;line-height:1.6}
+.meta{font-size:12px;color:#aeb4ba;margin-top:17px}
+main{max-width:1640px;margin:auto;padding:50px 26px 90px}
+.section-head{display:flex;align-items:baseline;gap:14px;margin:0 0 23px 6px}
+.num{font-weight:800;color:var(--orange);font-size:12px;letter-spacing:.12em}
+h2{font-size:23px;margin:0;letter-spacing:-.04em}
+.count{font-size:12px;color:#858b92}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(375px,1fr));gap:36px 22px;justify-items:center;margin-bottom:68px}
+.tile{width:375px}
+.tile-label{height:35px;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700}
+.tile-label small{font-size:11px;color:#8b9198;font-weight:400}
+.tile img{display:block;width:375px;height:812px;box-shadow:0 16px 35px #15202b22;border-radius:18px;cursor:zoom-in}
+.assets{background:#FFF0E6;border-radius:21px;padding:28px;margin-top:10px}.assets h2{margin-bottom:15px}
+.assets p{font-size:12px;color:#777e86;line-height:1.5}
+.assetgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px}
+.asset{height:72px;border:1px solid #F4D8C8;background:white;border-radius:12px;display:flex;align-items:center;gap:12px;padding:11px;overflow:hidden;font-size:14px;color:#38424d}
+.asset img.icon{width:29px;height:29px;object-fit:contain}
+.zoom{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#111820df;z-index:10;padding:20px}
+.zoom.open{display:flex}.zoom img{display:block;max-width:calc(100vw - 40px);max-height:calc(100vh - 40px);width:auto;height:auto;border-radius:18px}
+.zoom-close{position:absolute;top:16px;right:20px;background:white;color:#191B20;border:0;border-radius:99px;width:40px;height:40px;font:700 22px PretendardJP;cursor:pointer}
+.planning{background:#fff8f3;border:1px solid #ffe1d0;border-radius:28px;padding:48px;margin:-3px 0 72px;color:#202126}
+.plan-kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:800;letter-spacing:.15em;color:var(--orange)}
+.plan-kicker:before{content:'';width:19px;height:2px;background:var(--orange)}
+.planning h2{font-size:36px;line-height:1.24;letter-spacing:-.06em;margin:18px 0 14px}
+.plan-lead{font-size:16px;line-height:1.7;color:#646a72;margin:0 0 30px;max-width:800px}
+.plan-role{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#f1d6c8;border:1px solid #f1d6c8;border-radius:17px;overflow:hidden;margin-bottom:28px}
+.plan-role div{background:#fff;padding:18px 21px;min-height:79px}
+.plan-role small{display:block;color:#e35a20;font-size:11px;font-weight:800;letter-spacing:.1em;margin-bottom:7px}
+.plan-role b{font-size:14px;line-height:1.5}
+.plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin:40px 0 16px}
+.plan-head h3{font-size:22px;letter-spacing:-.05em;margin:0}
+.plan-head span{font-size:12px;color:#8d8f94}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.plan-card{background:#fff;border:1px solid #f3dfd4;border-radius:16px;padding:23px;min-height:165px}
+.plan-card .n{font-size:13px;font-weight:900;color:var(--orange);margin-bottom:18px}
+.plan-card h4{font-size:17px;margin:0 0 9px;letter-spacing:-.04em}
+.plan-card p{font-size:13px;line-height:1.6;color:#666e76;margin:0}
+.journey{background:#fff;border:1px solid #f3dfd4;border-radius:18px;padding:33px}
+.journey-main{display:flex;align-items:center;gap:8px}
+.journey-step{flex:1;text-align:center;background:#f7f8f9;border-radius:12px;padding:27px 8px;font-size:13px;font-weight:750;min-height:75px}
+.journey-step.highlight{background:#fff0e6;color:#d94f17}
+.journey-arrow{color:#e65b22;font-size:20px;font-weight:800}
+.journey-branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.journey-branch{border:1px solid #e9edf0;border-radius:12px;padding:24px 17px;min-height:90px;font-size:13px;line-height:1.55;background:#fff}
+.journey-branch b{display:block;font-size:12px;color:#e3541a;margin-bottom:5px}
+.journey-branch span{color:#616970}
+.decision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.decision{background:white;border:1px solid #f3dfd4;border-radius:15px;padding:27px 24px;min-height:125px}
+.decision b{font-size:15px;letter-spacing:-.04em}
+.decision p{font-size:13px;color:#697078;line-height:1.6;margin:8px 0 0}
+.metric-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--orange);border-top:4px solid var(--orange);padding:26px;background:var(--orange);border-radius:12px;min-height:160px;box-shadow:0 7px 18px #ff5b1712}
+.metric b{display:block;font-size:18px;margin-bottom:9px;color:#fff}
+.metric span{font-size:13px;color:#fff;line-height:1.5}
+@media(max-width:420px){main{padding:32px 0}.section-head{padding-left:16px}.grid{gap:29px}.tile{width:375px}.assets{border-radius:0}}
+@media(max-width:820px){.planning{border-radius:0;padding:30px 20px}.planning h2{font-size:29px}.plan-role,.plan-grid,.decision-grid,.metric-list{grid-template-columns:1fr}.journey-main{flex-wrap:wrap}.journey-step{flex-basis:42%}.journey-branches{grid-template-columns:1fr}}
+
+.deliverables{background:#fff;border:1px solid #e5e9ed;border-radius:28px;padding:48px;margin:0 0 72px;color:#202126}
+.deliverable-kicker{font-size:12px;font-weight:850;letter-spacing:.16em;color:var(--orange)}
+.deliverables>h2{font-size:34px;line-height:1.25;letter-spacing:-.055em;margin:15px 0 12px}
+.deliverable-intro{max-width:940px;color:#666e76;font-size:15px;line-height:1.7;margin:0 0 22px}
+.artifact-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px}
+.artifact-nav a{display:inline-block;text-decoration:none;background:#fff3ec;border:1px solid #ffd7c3;color:#d94f17;border-radius:99px;padding:10px 15px;font-size:12px;font-weight:750}
+.artifact{border-top:1px solid #e8ecef;padding:34px 0 40px;scroll-margin-top:24px}
+.artifact:last-child{padding-bottom:0}
+.artifact-head{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:22px}
+.artifact-head .copy{max-width:860px}
+.artifact-head small{display:block;color:var(--orange);font-size:12px;font-weight:850;letter-spacing:.14em;margin-bottom:7px}
+.artifact-head h3{font-size:25px;letter-spacing:-.05em;margin:0 0 8px}
+.artifact-head p{font-size:13px;line-height:1.65;color:#788089;margin:0}
+.artifact-tag{font-size:11px;font-weight:750;color:#66717b;background:#f2f4f6;border-radius:99px;padding:8px 12px;white-space:nowrap}
+.brief-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.brief-card{background:#f7f8f9;border:1px solid #e9ecef;border-radius:14px;padding:19px;min-height:143px}
+.brief-card b{display:block;font-size:13px;margin-bottom:10px}
+.brief-card p{font-size:13px;line-height:1.6;color:#69717b;margin:0}
+.brief-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.brief-note{background:#fff6f1;border:1px solid #ffdfce;border-radius:14px;padding:18px 20px}
+.brief-note b{font-size:13px;color:#d94f17}
+.brief-note p{font-size:13px;line-height:1.6;color:#6b6f75;margin:6px 0 0}
+.ia-root{display:flex;align-items:center;justify-content:center;background:#20242a;color:white;border-radius:13px;min-height:56px;font-weight:800;font-size:16px}
+.ia-stem{width:2px;height:23px;background:#ffc5a8;margin:auto}
+.ia-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ia-col{background:#fff8f4;border:1px solid #ffddca;border-radius:14px;padding:17px;min-height:190px}
+.ia-col strong{display:block;color:#d94f17;font-size:14px;margin-bottom:12px}
+.ia-col span{display:block;background:#fff;border:1px solid #f1e5dd;border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.4;margin-top:6px}
+.ia-col em{font-style:normal;font-size:10px;color:#9b8173;margin-left:5px}
+.flow-top{display:flex;align-items:center;gap:8px}
+.flow-box{flex:1;min-height:66px;background:#f5f7f8;border:1px solid #e6eaed;border-radius:12px;padding:15px;text-align:center}
+.flow-box b{display:block;font-size:13px}
+.flow-box span{font-size:11px;color:#818891}
+.flow-arrow{font-size:22px;color:var(--orange);font-weight:700}
+.flow-choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.flow-lane{background:#fff7f2;border:1px solid #ffdfcd;border-radius:14px;padding:19px;min-height:122px}
+.flow-lane b{display:block;font-size:14px;color:#d94f17;margin-bottom:8px}
+.flow-lane p{font-size:13px;line-height:1.6;margin:0;color:#606a73}
+.flow-merge{text-align:center;background:#22272d;color:#fff;border-radius:12px;padding:16px;font-size:13px;font-weight:750}
+.flow-exceptions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.flow-exceptions span{background:#f6f7f8;border-radius:10px;padding:12px;font-size:12px;line-height:1.5;color:#616a73}
+.flow-exceptions b{color:#2b3036}
+.wf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.wf-card{border:1px solid #e6eaed;border-radius:15px;background:#f8f9fa;padding:17px;min-width:0}
+.wf-card>strong{display:block;font-size:14px;margin-bottom:4px}
+.wf-card>small{display:block;color:#858d95;font-size:11px;margin-bottom:16px}
+.wf-device{width:190px;height:412px;margin:0 auto 15px;background:#fff;border:1px solid #cad0d6;border-radius:17px;position:relative;overflow:hidden;padding:0 11px}
+.wf-nav{height:36px;border-bottom:1px solid #e5e8eb;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:750}
+.wf-title{font-size:13px;font-weight:800;line-height:1.35;margin:16px 0 12px}
+.wf-block{border:1px solid #dce1e5;border-radius:7px;padding:9px;margin-top:7px;color:#707981;font-size:9px;min-height:31px}
+.wf-block.tall{min-height:72px}
+.wf-line{height:7px;background:#e3e7ea;border-radius:99px;margin:8px 0}
+.wf-line.short{width:62%}.wf-line.mid{width:78%}
+.wf-columns{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.wf-radio{height:29px;border:1px solid #dce1e5;border-radius:6px;padding:8px;font-size:9px;color:#707981}
+.wf-step{display:flex;gap:3px;margin-top:10px}
+.wf-step i{height:3px;flex:1;background:#cdd4da;border-radius:99px}
+.wf-button{position:absolute;bottom:12px;left:11px;right:11px;height:33px;background:#bac1c7;border-radius:7px;color:white;text-align:center;padding-top:10px;font-size:9px;font-weight:750}
+.wf-note{font-size:12px;line-height:1.5;color:#6c747d;margin:0}
+@media(max-width:1100px){.brief-grid,.ia-grid,.wf-grid{grid-template-columns:repeat(2,1fr)}.flow-exceptions{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.deliverables{border-radius:0;padding:30px 20px}.deliverables>h2{font-size:27px}.artifact-head{display:block}.artifact-tag{display:inline-block;margin-top:12px}.brief-grid,.brief-strip,.ia-grid,.flow-choice,.wf-grid,.flow-exceptions{grid-template-columns:1fr}.flow-top{flex-direction:column}.flow-arrow{transform:rotate(90deg)}.wf-device{width:190px}}
+</style><link rel="stylesheet" href="../assets/detail-frame.css">
+</head><body><header><div class="eyebrow">NAVI PAY / MOBILE UI CONCEPT</div><h1>나비페이의 결제 경험을<br>다시 기획하다.</h1><p>나비페이는 나비엠알오의 구매를 잇는 간편결제 서비스입니다.<br>수단 등록부터 인증과 결제 완료까지 하나의 흐름으로 이어집니다.</p><div class="hero-art" aria-hidden="true"><div class="hero-back"></div><div class="hero-card"><span class="card-brand">NAVI<span>PAY</span></span><span class="card-chip"></span><span class="card-waves">)))</span><span class="card-dots">•••• &nbsp; •••• &nbsp; •••• &nbsp; 1234</span></div></div></header><main><section class="planning" aria-labelledby="planning-title">
+<div class="plan-kicker">PRODUCT PLANNING</div>
+<h2 id="planning-title">결제의 앞뒤를 잇는<br>사용자 여정을 재설계했습니다.</h2>
+<p class="plan-lead">2019년 나비엠알오 재직 당시에는 나비페이 UI 디자인만 제작했습니다. 이번 포트폴리오에서는 당시 화면을 바탕으로 결제 수단 등록부터 인증과 결제 완료까지의 흐름, 그리고 예외 상황을 현재의 기획 관점에서 다시 정리하고 재설계했습니다.</p>
+<div class="plan-role">
+  <div><small>ROLE</small><b>나비페이 서비스 기획</b></div>
+  <div><small>SCOPE</small><b>결제 수단 등록 · 인증 · 결제 흐름</b></div>
+  <div><small>OUTPUT</small><b>사용자 플로우 · 화면 구조 · 예외 경로</b></div>
+</div>
+<div class="plan-head"><h3>문제 정의와 기획 목표</h3><span>사용자의 판단을 줄이는 방향</span></div>
+<div class="plan-grid">
+  <div class="plan-card"><div class="n">01 / CONTEXT</div><h4>결제 맥락 유지</h4><p>주문 금액과 선택한 결제 수단을 분명히 보여줘 등록 과정에 들어가도 결제 목적을 놓치지 않도록 구성했습니다.</p></div>
+  <div class="plan-card"><div class="n">02 / GUIDANCE</div><h4>다음 행동 안내</h4><p>계좌 정보, 은행 선택, 1원 인증, ARS 인증을 단계로 나눠 각 화면에 필요한 행동을 하나씩 제시했습니다.</p></div>
+  <div class="plan-card"><div class="n">03 / RECOVERY</div><h4>막힘 없는 복귀</h4><p>1원이 보이지 않거나 인증 전화를 받지 못했을 때 재요청과 정보 수정 경로를 확인할 수 있게 했습니다.</p></div>
+</div>
+<div class="plan-head"><h3>핵심 사용자 플로우</h3><span>계좌 · 카드 분기 후 결제로 복귀</span></div>
+<div class="journey">
+  <div class="journey-main"><div class="journey-step">주문·금액 확인</div><div class="journey-arrow">›</div><div class="journey-step highlight">결제 수단 선택</div><div class="journey-arrow">›</div><div class="journey-step">수단 등록·인증</div></div>
+  <div class="journey-branches">
+    <div class="journey-branch"><b>계좌 등록 경로</b><span>사업자·계좌 정보 → 은행 선택 → 1원 인증 → ARS 인증 → 등록 완료</span></div>
+    <div class="journey-branch"><b>카드 등록 경로</b><span>카드 정보 → 소유 확인 → 등록 완료</span></div>
+  </div>
+  <div class="journey-main"><div class="journey-step">결제 내용 최종 확인</div><div class="journey-arrow">›</div><div class="journey-step highlight">결제 비밀번호</div><div class="journey-arrow">›</div><div class="journey-step">결제 완료·수단 관리</div></div>
+</div>
+<div class="plan-head"><h3>주요 기획 결정</h3><span>화면 순서와 상태를 정한 이유</span></div>
+<div class="decision-grid">
+  <div class="decision"><b>계좌 정보 다음에 은행 선택</b><p>계좌 등록 화면에서 은행 필드를 자연스럽게 이어 선택하도록 배치해 입력 맥락을 유지했습니다.</p></div>
+  <div class="decision"><b>인증 과정은 상태별로 분리</b><p>1원 확인, 전화 요청, 전화 대기, 완료를 서로 다른 화면으로 나눠 사용자가 처리 결과를 알 수 있게 했습니다.</p></div>
+  <div class="decision"><b>인증 실패 시 다시 시도할 곳 제시</b><p>1원 미수신은 재전송, ARS 미응답은 재요청, 잘못된 연락처는 이전 단계 수정으로 복귀하도록 정의했습니다.</p></div>
+  <div class="decision"><b>등록 뒤 결제로 이어지는 흐름</b><p>등록 완료 후 결제 확인 화면으로 돌아가 선택한 수단과 금액을 재확인하도록 연결했습니다.</p></div>
+</div>
+<div class="plan-head"><h3>검증하고 싶은 지표</h3><span>실제 수치가 아닌 측정 항목</span></div>
+<div class="metric-list">
+  <div class="metric"><b>등록 완료율</b><span>결제 수단 선택 대비 등록 완료 비율</span></div>
+  <div class="metric"><b>단계별 이탈</b><span>정보 입력·은행 선택·인증 단계의 이탈</span></div>
+  <div class="metric"><b>인증 재시도</b><span>1원 재전송과 ARS 재요청 빈도</span></div>
+  <div class="metric"><b>결제 완료율</b><span>결제 확인 진입 대비 최종 완료 비율</span></div>
+</div>
+</section><section class="deliverables" aria-labelledby="deliverables-title">
+<div class="deliverable-kicker">PLANNING DELIVERABLES / 2026 RE-PLANNING</div>
+<h2 id="deliverables-title">화면 뒤에 있는 기획 산출물</h2>
+<p class="deliverable-intro">아래 문서는 2019년 실무 당시 제출한 문서가 아닙니다. 당시 제작한 UI와 현재의 시안을 바탕으로, 기획자 관점에서 서비스 구조와 사용 흐름을 새로 정리한 포트폴리오용 재기획 산출물입니다.</p>
+<nav class="artifact-nav" aria-label="기획 산출물 바로가기"><a href="#service-plan">01 서비스 기획서</a><a href="#information-architecture">02 IA 구조도</a><a href="#user-flow">03 유저 플로우</a><a href="#wireframes">04 와이어프레임</a></nav>
+
+<article class="artifact" id="service-plan">
+  <div class="artifact-head"><div class="copy"><small>01 / SERVICE PLAN</small><h3>서비스 기획서</h3><p>나비페이의 목적, 이용 상황, 핵심 기능과 설계 범위를 한 장으로 정의했습니다.</p></div><span class="artifact-tag">기획 방향 · 범위 · 요구사항</span></div>
+  <div class="brief-grid">
+    <div class="brief-card"><b>서비스 정의</b><p>나비엠알오의 주문 과정에서 계좌·카드를 등록하고 인증한 뒤 결제까지 이어주는 간편결제 경험입니다.</p></div>
+    <div class="brief-card"><b>주요 사용자</b><p>나비엠알오에서 주문을 진행하며 처음 결제 수단을 등록하거나 기존 수단으로 다시 결제하는 구매자입니다.</p></div>
+    <div class="brief-card"><b>해결할 문제</b><p>수단 등록, 본인 확인, 결제가 길게 이어질 때 사용자가 현재 단계와 다음 행동을 놓치기 쉽습니다.</p></div>
+    <div class="brief-card"><b>기획 목표</b><p>주문 맥락을 유지하고, 인증 상태를 명확히 알리며, 실패 시 재시도 경로를 제공하는 것입니다.</p></div>
+  </div>
+  <div class="brief-strip">
+    <div class="brief-note"><b>핵심 기능 범위</b><p>주문·금액 확인, 계좌·카드 등록, 은행 선택, 1원·ARS·카드 인증, 결제 확인, 비밀번호 입력, 완료와 수단 관리.</p></div>
+    <div class="brief-note"><b>정책 확정이 필요한 항목</b><p>실제 금융기관 연동, 인증 제한 횟수와 유효시간, 결제 실패 처리, 환불·취소 정책은 서비스 운영 기준에 맞춰 별도로 확정합니다.</p></div>
+  </div>
+</article>
+
+<article class="artifact" id="information-architecture">
+  <div class="artifact-head"><div class="copy"><small>02 / INFORMATION ARCHITECTURE</small><h3>IA 구조도</h3><p>화면을 기능별로 묶고 진입점과 하위 화면의 관계를 정의했습니다. 숫자는 아래 시안의 화면 순서와 연결됩니다.</p></div><span class="artifact-tag">메뉴 · 화면 계층</span></div>
+  <div class="ia-root">나비페이 주문 · 결제</div><div class="ia-stem"></div>
+  <div class="ia-grid">
+    <div class="ia-col"><strong>결제 진입</strong><span>주문·금액 확인 <em>01</em></span><span>결제 수단 선택 <em>02</em></span></div>
+    <div class="ia-col"><strong>계좌 등록 · 인증</strong><span>사업자 정보 <em>03</em></span><span>계좌 정보 · 은행 선택 <em>04–05</em></span><span>1원 인증 · ARS 인증 <em>06–09</em></span><span>계좌 등록 완료 <em>10</em></span></div>
+    <div class="ia-col"><strong>카드 등록</strong><span>카드 정보 입력 <em>11</em></span><span>카드 소유 확인 <em>12</em></span></div>
+    <div class="ia-col"><strong>결제 · 관리</strong><span>결제 수단 관리 <em>13</em></span><span>결제 내용 확인 <em>14</em></span><span>결제 비밀번호 <em>15</em></span><span>결제 완료 <em>16</em></span></div>
+  </div>
+</article>
+
+<article class="artifact" id="user-flow">
+  <div class="artifact-head"><div class="copy"><small>03 / USER FLOW</small><h3>유저 플로우</h3><p>첫 결제와 재결제, 계좌와 카드의 분기, 인증 실패 시 되돌아갈 지점을 함께 표시했습니다.</p></div><span class="artifact-tag">조건 · 분기 · 예외</span></div>
+  <div class="flow-top"><div class="flow-box"><b>주문 확인</b><span>금액·상품 확인</span></div><div class="flow-arrow">›</div><div class="flow-box"><b>수단 선택</b><span>등록된 수단 유무 확인</span></div><div class="flow-arrow">›</div><div class="flow-box"><b>신규 등록 필요?</b><span>예: 아래 분기 · 아니오: 결제 확인</span></div></div>
+  <div class="flow-choice"><div class="flow-lane"><b>계좌 선택</b><p>사업자 정보 → 계좌 정보 → 은행 선택 → 1원 인증 → ARS 인증 → 계좌 등록 완료</p></div><div class="flow-lane"><b>카드 선택</b><p>카드 정보 입력 → 카드 소유 확인 → 카드 등록 완료</p></div></div>
+  <div class="flow-merge">선택한 수단으로 결제 확인 → 비밀번호 입력 → 결제 완료</div>
+  <div class="flow-exceptions"><span><b>1원 미수신</b><br>재전송 후 인증 재시도</span><span><b>ARS 미응답</b><br>전화 재요청 또는 연락처 수정</span><span><b>정보 입력 오류</b><br>해당 입력 단계로 복귀</span><span><b>비밀번호 불일치</b><br>재입력 안내 후 결제 재시도</span></div>
+</article>
+
+<article class="artifact" id="wireframes">
+  <div class="artifact-head"><div class="copy"><small>04 / WIREFRAME</small><h3>대표 와이어프레임</h3><p>화면의 시각 디자인에 앞서 정보의 우선순위와 주요 행동을 확인할 수 있는 핵심 화면 4종입니다.</p></div><span class="artifact-tag">정보 구조 · CTA 배치</span></div>
+  <div class="wf-grid">
+    <div class="wf-card"><strong>WF-01 · 결제 시작</strong><small>시안 01–02 대응</small><div class="wf-device"><div class="wf-nav">주문 / 결제</div><div class="wf-title">주문 내용을 확인하고<br>결제해 주세요</div><div class="wf-block tall">상품 요약<div class="wf-line"></div><div class="wf-line short"></div></div><div class="wf-block">총 결제 금액</div><div class="wf-block">결제 수단 선택</div><div class="wf-button">결제하기</div></div><p class="wf-note">결제 전에 금액과 수단을 같은 맥락에서 확인합니다.</p></div>
+    <div class="wf-card"><strong>WF-02 · 계좌 등록</strong><small>시안 03–05 대응</small><div class="wf-device"><div class="wf-nav">계좌 등록</div><div class="wf-step"><i></i><i></i><i></i><i></i></div><div class="wf-title">계좌 정보를 입력해 주세요</div><div class="wf-columns"><div class="wf-radio">법인</div><div class="wf-radio">개인</div></div><div class="wf-block">예금주</div><div class="wf-block">은행 선택</div><div class="wf-block">계좌번호</div><div class="wf-button">계좌 인증하기</div></div><p class="wf-note">계좌 정보를 입력하다가 은행을 선택하도록 연결합니다.</p></div>
+    <div class="wf-card"><strong>WF-03 · 계좌 인증</strong><small>시안 06–09 대응</small><div class="wf-device"><div class="wf-nav">계좌 인증</div><div class="wf-step"><i></i><i></i><i></i><i></i></div><div class="wf-title">계좌로 보낸 1원을<br>확인해 주세요</div><div class="wf-block tall">은행·계좌 정보<div class="wf-line mid"></div><div class="wf-line short"></div></div><div class="wf-columns"><div class="wf-radio">숫자 입력</div><div class="wf-radio">숫자 입력</div></div><div class="wf-block">재전송 / 재시도 안내</div><div class="wf-button">확인</div></div><p class="wf-note">인증 상태와 실패 시 다시 시도할 경로를 보여줍니다.</p></div>
+    <div class="wf-card"><strong>WF-04 · 결제 확인</strong><small>시안 14–16 대응</small><div class="wf-device"><div class="wf-nav">결제 확인</div><div class="wf-title">결제 전 한 번 더<br>확인해 주세요</div><div class="wf-block tall">총 결제 금액<div class="wf-line"></div></div><div class="wf-block tall">구매처·주문명·결제 수단<div class="wf-line mid"></div></div><div class="wf-radio">약관 확인</div><div class="wf-button">결제하기</div></div><p class="wf-note">최종 금액과 선택 수단을 확인한 뒤 비밀번호 단계로 이동합니다.</p></div>
+  </div>
+</article>
+</section><div class="section-head"><span class="num">FLOW 01</span><h2>결제 시작</h2><span class="count">2 screens</span></div><div class="grid"><div class="tile"><div class="tile-label"><span>결제 홈</span><small>01 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-f936d5fcea3f14293052.png" alt="결제 홈 시안"></div><div class="tile"><div class="tile-label"><span>결제 수단 선택</span><small>02 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-caf94b71cce052505739.png" alt="결제 수단 선택 시안"></div></div><div class="section-head"><span class="num">FLOW 02</span><h2>사업자 · 계좌 등록</h2><span class="count">8 screens</span></div><div class="grid"><div class="tile"><div class="tile-label"><span>사업자 정보</span><small>03 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-695779542bbe4e60326c.png" alt="사업자 정보 시안"></div><div class="tile"><div class="tile-label"><span>계좌 정보 입력</span><small>04 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-8769413834c3f00a0147.png" alt="계좌 정보 입력 시안"></div><div class="tile"><div class="tile-label"><span>은행 선택</span><small>05 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-8cb52d9a731173a86039.png" alt="은행 선택 시안"></div><div class="tile"><div class="tile-label"><span>1원 인증</span><small>06 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-58a6d0abf6c2d3da34d8.png" alt="1원 인증 시안"></div><div class="tile"><div class="tile-label"><span>ARS 인증 요청</span><small>07 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-488ba4b9a6d6486fa43e.png" alt="ARS 인증 요청 시안"></div><div class="tile"><div class="tile-label"><span>ARS 인증 진행</span><small>08 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-56875b4671c1cac9401b.png" alt="ARS 인증 진행 시안"></div><div class="tile"><div class="tile-label"><span>ARS 인증 완료</span><small>09 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-84f52352702572f3deb8.png" alt="ARS 인증 완료 시안"></div><div class="tile"><div class="tile-label"><span>계좌 등록 완료</span><small>10 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-9b4a10adedbeef7b5565.png" alt="계좌 등록 완료 시안"></div></div><div class="section-head"><span class="num">FLOW 03</span><h2>카드 등록 · 수단 관리</h2><span class="count">3 screens</span></div><div class="grid"><div class="tile"><div class="tile-label"><span>카드 등록</span><small>11 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-77416e10ea07e2bb120c.png" alt="카드 등록 시안"></div><div class="tile"><div class="tile-label"><span>카드 인증</span><small>12 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-916c1c882a9ffe915877.png" alt="카드 인증 시안"></div><div class="tile"><div class="tile-label"><span>결제 수단 관리</span><small>13 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-1acc3965a46c4b5ad124.png" alt="결제 수단 관리 시안"></div></div><div class="section-head"><span class="num">FLOW 04</span><h2>결제 · 완료</h2><span class="count">3 screens</span></div><div class="grid"><div class="tile"><div class="tile-label"><span>결제 확인</span><small>14 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-7595bbaa623468e82c23.png" alt="결제 확인 시안"></div><div class="tile"><div class="tile-label"><span>결제 비밀번호</span><small>15 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-6501d36b33900a570c92.png" alt="결제 비밀번호 시안"></div><div class="tile"><div class="tile-label"><span>결제 완료</span><small>16 / 16</small></div><img loading="lazy" width="375" height="812" src="../assets/images/image-6e53cb0474bd0a0f1f53.png" alt="결제 완료 시안"></div></div><section class="assets"><h2>은행 로고 에셋 전체</h2><div class="assetgrid"><div class="asset"><img class="icon" src="../assets/images/image-51db1eb5d62289685ce0.png" alt=""><span>나비페이 은행 아이콘 01</span></div><div class="asset"><img class="icon" src="../assets/images/image-a34b0fe8df05ce74621d.png" alt=""><span>나비페이 은행 아이콘 02</span></div><div class="asset"><img class="icon" src="../assets/images/image-cc3f86b800ae46783ace.png" alt=""><span>나비페이 은행 아이콘 03</span></div><div class="asset"><img class="icon" src="../assets/images/image-a49b7c566493b73bec2b.png" alt=""><span>나비페이 은행 아이콘 04</span></div><div class="asset"><img class="icon" src="../assets/images/image-92e95cf7b621846eea73.png" alt=""><span>나비페이 은행 아이콘 05</span></div><div class="asset"><img class="icon" src="../assets/images/image-ee155935aa7987c5e108.png" alt=""><span>나비페이 은행 아이콘 06</span></div><div class="asset"><img class="icon" src="../assets/images/image-173a11c76e4be3575f78.png" alt=""><span>나비페이 은행 아이콘 07</span></div><div class="asset"><img class="icon" src="../assets/images/image-3de013702902e8b433c2.png" alt=""><span>나비페이 은행 아이콘 08</span></div><div class="asset"><img class="icon" src="../assets/images/image-de39d70854d71e52cd38.png" alt=""><span>나비페이 은행 아이콘 09</span></div><div class="asset"><img class="icon" src="../assets/images/image-c457a3d5247b68396c9a.png" alt=""><span>나비페이 은행 아이콘 10</span></div><div class="asset"><img class="icon" src="../assets/images/image-5abc60aaca94840dd799.png" alt=""><span>나비페이 은행 아이콘 11</span></div><div class="asset"><img class="icon" src="../assets/images/image-646beeea4893ecf31555.png" alt=""><span>나비페이 은행 아이콘 12</span></div><div class="asset"><img class="icon" src="../assets/images/image-5482903ad55cae320379.png" alt=""><span>나비페이 은행 아이콘 13</span></div><div class="asset"><img class="icon" src="../assets/images/image-0bdaa1a3d75b8affcfc2.png" alt=""><span>나비페이 은행 아이콘 14</span></div><div class="asset"><img class="icon" src="../assets/images/image-0807fa7a5f505e53e9e4.png" alt=""><span>나비페이 은행 아이콘 15</span></div><div class="asset"><img class="icon" src="../assets/images/image-8d6abb84c0563b0b3c8b.png" alt=""><span>나비페이 은행 아이콘 16</span></div><div class="asset"><img class="icon" src="../assets/images/image-d120b269032436551f7d.png" alt=""><span>나비페이 은행 아이콘 17</span></div><div class="asset"><img class="icon" src="../assets/images/image-aa239dceb572811e757a.png" alt=""><span>나비페이 은행 아이콘 18</span></div></div></section></main><div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-label="화면 확대"><button class="zoom-close" type="button" aria-label="닫기">×</button><img alt="확대 화면"></div><script>
+const zoom=document.getElementById('zoom');
+const zoomImage=zoom.querySelector('img');
+document.querySelectorAll('.tile img').forEach(img=>{
+  img.tabIndex=0;
+  const open=()=>{zoomImage.src=img.src;zoomImage.alt=img.alt;zoom.classList.add('open')};
+  img.addEventListener('click',open);
+  img.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();open()}});
+});
+zoom.addEventListener('click',event=>{if(event.target===zoom||event.target.classList.contains('zoom-close'))zoom.classList.remove('open')});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')zoom.classList.remove('open')});
+</script><script src="../assets/detail-bridge.js"></script>
+</body></html>

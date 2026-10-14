@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#131313">
+  <meta name="description" content="나비엠알오의 네 가지 A/B 테스트 시안을 비교하는 UX 포트폴리오. 아이디어 제안부터 디자인, 코딩까지의 작업을 담았습니다.">
+  <title>나비엠알오_AB테스트비교_v03</title>
+  <style>
+:root{--orange:#FF5B17;--ink:#191918;--dark:#141414;--paper:#f4f3ef;--line:#dad8d2;--muted:#706e69}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:'DM Sans','Noto Sans KR',Arial,sans-serif;word-break:keep-all}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.page-width{width:min(100% - 120px,1680px);margin-inline:auto}.site-header{height:76px;position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(24px,3.125vw,60px);background:rgba(20,20,20,.97);color:#fff;border-bottom:1px solid #3a3a39;backdrop-filter:blur(15px)}.wordmark{font-family:'DM Sans',sans-serif;font-weight:800;font-size:25px;letter-spacing:-1.8px;white-space:nowrap}.wordmark span{color:var(--orange)}.wordmark i{font-style:normal;font-size:12px;letter-spacing:1.7px;font-weight:500;margin-left:15px;color:#aaa}.site-header nav{display:flex;gap:30px}.site-header nav a{font-size:13px;color:#c8c7c5;transition:color .2s}.site-header nav a:hover,.site-header nav a.active{color:var(--orange)}.header-index{font-size:11px;letter-spacing:1.5px;color:#8f8f8c;white-space:nowrap}.hero{background:var(--dark);color:#fff;min-height:calc(100svh - 76px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.8fr);gap:8vw;align-items:center;flex:1;padding-top:95px;padding-bottom:95px}.eyebrow,.section-kicker{font-size:13px;letter-spacing:2.3px;font-weight:700}.eyebrow{display:flex;align-items:center;gap:12px;color:#c9c8c4}.orange-square{display:inline-block;width:9px;height:9px;background:var(--orange);flex:none}.hero h1{font-size:clamp(58px,5.25vw,104px);letter-spacing:-.075em;line-height:1.18;margin:36px 0 32px;font-weight:800}.hero h1 em,.footer h2 em{color:var(--orange);font-style:normal}.hero-desc{font-size:19px;line-height:1.85;color:#bcbab5;margin:0}.hero-link{display:inline-flex;gap:80px;align-items:center;margin-top:55px;padding:17px 2px;border-bottom:1px solid var(--orange);color:var(--orange);font-size:15px;font-weight:700}.hero-link span{font-size:20px}.hero-aside{border-left:1px solid #393938;padding-left:55px}.hero-number{font-family:'DM Sans',sans-serif;font-size:clamp(140px,15vw,280px);line-height:.85;font-weight:700;letter-spacing:-.12em;color:var(--orange);display:flex;flex-direction:column}.hero-number span{font-size:13px;letter-spacing:3px;color:#e4e2df;margin-top:35px;margin-left:12px}.hero-mini-list{margin-top:60px}.hero-mini-list div{display:grid;grid-template-columns:44px 1fr 65px;gap:12px;align-items:center;border-top:1px solid #3b3b39;padding:16px 0}.hero-mini-list div:last-child{border-bottom:1px solid #3b3b39}.hero-mini-list b{font-size:13px;color:var(--orange)}.hero-mini-list span{font-size:16px}.hero-mini-list i{font-size:12px;font-style:normal;color:#8c8b88;text-align:right}.hero-bottom{height:72px;border-top:1px solid #343432;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1.5px;color:#84837f}.intro-band{background:var(--orange);color:#fff}.intro-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center;padding-top:45px;padding-bottom:45px}.intro-inner strong{font-size:clamp(25px,2vw,38px);letter-spacing:-.055em}.intro-inner p{font-size:16px;line-height:1.8;margin:0;max-width:750px}.case{padding:140px 0 165px;scroll-margin-top:75px}.case-light{background:var(--paper)}.case-dark{background:#1d1d1d;color:#f6f5f2}.case-desktop{background:#e7e5df}.case-top{display:grid;grid-template-columns:200px minmax(0,1fr) 150px;gap:30px;align-items:start;padding-bottom:58px;border-bottom:1px solid currentColor}.case-no{font-family:'DM Sans',sans-serif;font-size:66px;line-height:1;letter-spacing:-.08em;font-weight:700;color:var(--orange)}.case-no span{display:block;font-size:14px;letter-spacing:1px;color:var(--muted);margin-top:18px}.case-dark .case-no span{color:#93928f}.section-kicker{color:var(--orange);margin:3px 0 22px}.case h2{font-size:clamp(42px,4vw,74px);letter-spacing:-.07em;line-height:1.15;margin:0 0 16px;font-weight:800}.case-header>p:last-child{font-size:20px;color:#67655f;margin:0;line-height:1.6}.case-dark .case-header>p:last-child{color:#aaa8a4}.case-type{text-align:right;text-transform:uppercase;font-size:13px;line-height:1.7;letter-spacing:1.2px;color:#77756f;padding-top:5px}.case-dark .case-type{color:#aaa}.case-insight{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:27px 0 64px;align-items:start}.case-insight span{font-size:13px;font-weight:700;color:var(--orange);letter-spacing:1px}.case-insight p{font-size:17px;line-height:1.8;max-width:920px;margin:0;color:#605e59}.case-dark .case-insight p{color:#bcbab5}.shot-grid{display:grid;gap:18px;align-items:start}.shot-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.shot-grid.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1430px;margin:auto}.shot-card,.desktop-card{margin:0;min-width:0}.shot-card figcaption,.desktop-card figcaption{min-height:122px;padding:22px 2px 22px}.variant{display:block;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:800;letter-spacing:1.3px;color:#77746f;margin-bottom:12px}.variant.accent{color:var(--orange)}.adopted{display:inline-block;margin-left:10px;color:var(--orange);font-size:14px;font-weight:700;letter-spacing:0;vertical-align:middle}figcaption h3{font-size:22px;letter-spacing:-.045em;margin:0 0 5px;line-height:1.3}figcaption p{margin:0;color:#77746f;font-size:14px;line-height:1.5}.case-dark figcaption p{color:#aaa7a1}.image-button{display:block;width:100%;padding:0;background:none;border:0;text-align:left;overflow:hidden}.shot-card .image-button{background:#fff;border-radius:12px;box-shadow:0 17px 37px rgba(27,25,22,.11)}.case-dark .shot-card .image-button{box-shadow:0 18px 60px rgba(0,0,0,.3)}.image-button img{display:block;width:100%;height:auto;transition:transform .35s ease}.image-button:hover img{transform:scale(1.025)}.image-button:focus-visible{outline:3px solid var(--orange);outline-offset:4px}.zoom-hint{display:block;text-align:right;font-size:12px;color:#8d8a84;margin-top:14px}.desktop-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.desktop-card figcaption{min-height:112px}.desktop-card .image-button{background:#fff;box-shadow:0 17px 37px rgba(27,25,22,.12)}.footer{background:#151515;color:#f6f4f0;padding:120px 0 30px}.footer-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:end}.footer h2{font-size:clamp(42px,4.4vw,82px);letter-spacing:-.07em;line-height:1.3;margin:30px 0 0}.footer-detail{border-top:1px solid #555;padding-top:20px}.footer-detail p{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #3b3b39;margin:0;padding:18px 0;color:#999;font-size:13px;letter-spacing:1px}.footer-detail strong{font-size:15px;font-weight:600;letter-spacing:0;color:#e6e4df;text-align:right}.footer-detail small{display:block;color:#85837e;font-size:13px;line-height:1.8;margin-top:25px}.footer-bottom{display:flex;justify-content:space-between;border-top:1px solid #383837;margin-top:110px;padding-top:22px;font-size:11px;letter-spacing:1.3px;color:#8c8b87}.footer-bottom a:hover{color:var(--orange)}body.modal-open{overflow:hidden}dialog{width:min(94vw,1400px);max-height:94dvh;overflow:hidden;border:1px solid #444;background:#171717;color:#fff;padding:0;box-shadow:0 30px 100px rgba(0,0,0,.6)}dialog[open]{display:flex;flex-direction:column}dialog::backdrop{background:rgba(0,0,0,.8)}.dialog-top{flex:0 0 58px;padding:0 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #414141;font-size:14px}.dialog-top button{background:none;border:0;color:#fff;font-size:14px;padding:12px}.dialog-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none;text-align:center;padding:30px}.dialog-scroll::-webkit-scrollbar{display:none}.dialog-scroll img{display:block;max-width:100%;height:auto;margin:0 auto}.dialog-scroll img[src*="hero"],.dialog-scroll img[src*="cart"],.dialog-scroll img[src*="ship"]{width:min(100%,828px);border-radius:12px}@media(max-width:1200px){.page-width{width:min(100% - 72px,1680px)}.site-header nav{gap:16px}.hero-grid{gap:40px}.hero-aside{padding-left:32px}.case-top{grid-template-columns:130px 1fr 110px}.case-insight{grid-template-columns:130px 1fr}.case-no{font-size:54px}figcaption h3{font-size:19px}}@media(max-width:760px){.page-width{width:calc(100% - 36px)}.site-header{height:62px;padding:0 18px}.site-header nav,.header-index{display:none}.wordmark{font-size:22px}.wordmark i{font-size:10px;margin-left:8px}.hero{min-height:auto}.hero-grid{display:block;padding-top:75px;padding-bottom:65px}.hero h1{font-size:clamp(43px,11vw,70px);margin:25px 0}.hero-desc{font-size:16px}.hero-desc br{display:none}.hero-link{margin-top:35px}.hero-aside{margin-top:85px;padding-left:0;border:0}.hero-number{font-size:145px}.hero-number span{margin-top:22px}.hero-mini-list{margin-top:40px}.hero-bottom{height:55px}.hero-bottom span:last-child{display:none}.intro-inner{grid-template-columns:1fr;gap:15px;padding-top:34px;padding-bottom:38px}.intro-inner strong{font-size:28px}.intro-inner p{font-size:14px}.case{padding:85px 0 100px;scroll-margin-top:62px}.case-top{grid-template-columns:1fr;gap:12px;padding-bottom:32px}.case-no{font-size:48px}.case-no span{display:inline;margin-left:12px}.section-kicker{margin:14px 0}.case h2{font-size:45px}.case-header>p:last-child{font-size:16px}.case-type{text-align:left;padding:0}.case-type br{display:none}.case-insight{display:block;padding:22px 0 42px}.case-insight p{font-size:15px;margin-top:8px}.shot-grid.four,.shot-grid.three,.desktop-grid{grid-template-columns:1fr 1fr;gap:14px}.shot-card figcaption,.desktop-card figcaption{min-height:128px}.shot-card figcaption{padding-top:15px}.variant{font-size:10px}.shot-card h3,.desktop-card h3{font-size:16px}.shot-card p,.desktop-card p{font-size:12px}.zoom-hint{font-size:11px}.footer{padding-top:80px}.footer-inner{grid-template-columns:1fr;gap:50px}.footer h2{font-size:44px}.footer-bottom{margin-top:80px}}@media(max-width:470px){.shot-grid.four,.shot-grid.three,.desktop-grid{grid-template-columns:1fr}.shot-card figcaption,.desktop-card figcaption{min-height:auto}.shot-card .image-button{max-width:360px;margin:auto}.shot-card figcaption{padding-bottom:20px}.zoom-hint{margin-bottom:30px}.desktop-card{margin-bottom:25px}.footer-detail p{display:block}.footer-detail strong{display:block;text-align:left;margin-top:8px}.footer-bottom{font-size:10px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.image-button img{transition:none}}
+
+</style>
+<link rel="stylesheet" href="../assets/detail-frame.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="포트폴리오 맨 위로">NAVI<span>MRO</span><i> / A·B TEST</i></a>
+    <nav aria-label="테스트 목차">
+      <a href="#test-01">01 배너</a><a href="#test-02">02 장바구니</a><a href="#test-03">03 배송비</a><a href="#test-04">04 추천 노출</a>
+    </nav>
+    <span class="header-index">나비엠알오_AB테스트비교_v03</span>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid page-width">
+        <div class="hero-main">
+          <p class="eyebrow"><span class="orange-square"></span> 나비엠알오_AB테스트비교_v03</p>
+          <h1 id="hero-title">한 화면의 차이가<br><em>다음 행동을</em> 바꾼다.</h1>
+          <p class="hero-desc">나비엠알오에서 진행한 네 가지 A/B 테스트 시안.<br>기존 화면과 제안안을 나란히 두고, 각 선택의 의도를 기록했습니다.</p>
+          <a class="hero-link" href="#test-01">시안 비교 보기 <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-aside" aria-label="프로젝트 개요">
+          <div class="hero-number">04<span>A/B TESTS</span></div>
+          <div class="hero-mini-list">
+            <div><b>01</b><span>메인 롤링배너</span><i>모바일</i></div>
+            <div><b>02</b><span>장바구니 팝업</span><i>모바일</i></div>
+            <div><b>03</b><span>배송비 SAVE</span><i>모바일</i></div>
+            <div><b>04</b><span>추천 노출 팝업</span><i>데스크톱</i></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom page-width"><span>IDEA PROPOSAL · UI DESIGN · FRONT-END CODING</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="intro-band" aria-label="작업 범위">
+      <div class="page-width intro-inner"><strong>기획부터 구현까지, 하나의 흐름으로.</strong><p>아이디어 제안, 화면 디자인, 프런트엔드 코딩을 직접 담당했습니다. 이 포트폴리오는 확보된 원본 시안을 그대로 사용하며, 성과 수치 대신 화면 구성과 비교 의도를 보여줍니다.</p></div>
+    </section>
+
+    <section class="case case-light" id="test-01" aria-labelledby="title-01">
+      <div class="page-width">
+        <div class="case-top"><div class="case-no">01<span>/ 04</span></div><div class="case-header"><p class="section-kicker">MOBILE · MAIN</p><h2 id="title-01">메인 롤링배너</h2><p>첫 화면에서 프로모션을 어떻게 탐색하게 할 것인가.</p></div><div class="case-type">기존 1안<br>비교 3안</div></div>
+        <div class="case-insight"><span>비교 관점</span><p>큰 단일 배너, 한눈에 보이는 그리드, 가로 탐색형 카드와 다중 행 카드가 프로모션의 가시성과 탐색 방식에 어떤 차이를 만드는지 비교했습니다.</p></div>
+        <div class="shot-grid four">
+          <figure class="shot-card"><figcaption><span class="variant">ORIGINAL</span><h3>기존 · 단일 롤링배너</h3><p>한 번에 한 프로모션에 집중</p></figcaption><button class="image-button" data-full="../assets/images/image-4862fd1dc4e8c57fb54c.png" data-caption="기존 · 단일 롤링배너"><img src="../assets/images/image-4862fd1dc4e8c57fb54c.png" alt="기존 모바일 메인 화면. 큰 단일 롤링배너 아래에 바로가기 아이콘이 보인다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST A</span><h3>6개 카드 그리드</h3><p>여러 기획전을 한 화면에 배치</p></figcaption><button class="image-button" data-full="../assets/images/image-f447d38e4ec35d3b17c4.png" data-caption="테스트 A · 6개 카드 그리드"><img src="../assets/images/image-f447d38e4ec35d3b17c4.png" alt="모바일 메인 테스트 A. 여섯 개의 프로모션 카드가 두 줄 그리드로 보인다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST B</span><h3>가로 탐색형 카드</h3><p>좌우로 이어지는 프로모션 탐색</p></figcaption><button class="image-button" data-full="../assets/images/image-2d1a0c17bd928dc90a1a.png" data-caption="테스트 B · 가로 탐색형 카드"><img src="../assets/images/image-2d1a0c17bd928dc90a1a.png" alt="모바일 메인 테스트 B. 프로모션 카드가 가로로 이어지고 페이지 표시가 있다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST C</span><h3>다중 행 카드 <span class="adopted">채택</span></h3><p>두 줄 배치와 좌우 탐색을 결합</p></figcaption><button class="image-button" data-full="../assets/images/image-30a9c6d1aadac5d10ec8.png" data-caption="테스트 C · 다중 행 카드"><img src="../assets/images/image-30a9c6d1aadac5d10ec8.png" alt="모바일 메인 테스트 C. 두 줄의 프로모션 카드와 좌우 탐색 화살표가 있다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case case-dark" id="test-02" aria-labelledby="title-02">
+      <div class="page-width">
+        <div class="case-top"><div class="case-no">02<span>/ 04</span></div><div class="case-header"><p class="section-kicker">MOBILE · ADD TO CART</p><h2 id="title-02">장바구니 팝업</h2><p>담은 직후, 어디까지 보여주고 어떻게 다음 행동으로 연결할 것인가.</p></div><div class="case-type">비교 3안</div></div>
+        <div class="case-insight"><span>비교 관점</span><p>연관상품이 포함된 큰 팝업, 구매 흐름을 덜 가리는 작은 안내, 상품을 세로로 훑는 바텀시트의 정보량과 화면 점유 방식을 비교했습니다.</p></div>
+        <div class="shot-grid three">
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST A</span><h3>연관상품 확장형 <span class="adopted">채택</span></h3><p>담기 완료와 추천상품을 함께 제시</p></figcaption><button class="image-button" data-full="../assets/images/image-ff99d981441344a776d8.png" data-caption="장바구니 팝업 · 연관상품 확장형"><img src="../assets/images/image-ff99d981441344a776d8.png" alt="장바구니 담기 완료 팝업에 연관상품 카드와 장바구니 이동, 계속 쇼핑하기 버튼이 있다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST B</span><h3>컴팩트 안내형</h3><p>핵심 메시지와 두 행동에 집중</p></figcaption><button class="image-button" data-full="../assets/images/image-8d073eb425e785e595d4.png" data-caption="장바구니 팝업 · 컴팩트 안내형"><img src="../assets/images/image-8d073eb425e785e595d4.png" alt="장바구니 버튼 근처의 작은 담기 완료 팝업과 두 개의 후속 행동 버튼이 있다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">TEST C</span><h3>바텀시트 추천형</h3><p>연관상품을 세로 목록으로 탐색</p></figcaption><button class="image-button" data-full="../assets/images/image-491db3ac9f5bee272581.png" data-caption="장바구니 팝업 · 바텀시트 추천형"><img src="../assets/images/image-491db3ac9f5bee272581.png" alt="담기 완료 뒤 바텀시트에서 연관상품을 세로 목록으로 보여주는 화면이다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case case-light" id="test-03" aria-labelledby="title-03">
+      <div class="page-width">
+        <div class="case-top"><div class="case-no">03<span>/ 04</span></div><div class="case-header"><p class="section-kicker">MOBILE · CART</p><h2 id="title-03">배송비 SAVE</h2><p>무료배송까지 남은 금액을, 장바구니 안에서 바로 행동으로.</p></div><div class="case-type">기존 1안<br>비교 3안</div></div>
+        <div class="case-insight"><span>비교 관점</span><p>기존 장바구니에 남은 금액과 진행 상태를 추가하고, 추천상품 화면으로 이어지는 흐름입니다. 마지막 두 이미지는 같은 추천 화면의 선택 상태 차이를 보여줍니다.</p></div>
+        <div class="shot-grid four">
+          <figure class="shot-card"><figcaption><span class="variant">ORIGINAL</span><h3>기존 장바구니</h3><p>상품과 주문 금액 중심</p></figcaption><button class="image-button" data-full="../assets/images/image-fcaa15436b217a3e9b75.png" data-caption="배송비 SAVE · 기존 장바구니"><img src="../assets/images/image-fcaa15436b217a3e9b75.png" alt="기존 모바일 장바구니 화면. 상품 목록과 주문하기 버튼이 보인다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">STEP 01</span><h3>남은 금액 안내</h3><p>진행 바와 추천상품 진입점</p></figcaption><button class="image-button" data-full="../assets/images/image-6f5f8ed14bdded4a62c5.png" data-caption="배송비 SAVE · 남은 금액 안내"><img src="../assets/images/image-6f5f8ed14bdded4a62c5.png" alt="무료배송까지 남은 금액과 진행 바, 배송비 SAVE 상품 보기 링크가 추가된 장바구니 화면이다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">STEP 02A</span><h3>추천상품 · 선택 상태 A</h3><p>추천 목록에서 상품 선택</p></figcaption><button class="image-button" data-full="../assets/images/image-7757004382aec242d1ce.png" data-caption="배송비 SAVE · 추천상품 선택 상태 A"><img src="../assets/images/image-7757004382aec242d1ce.png" alt="추천상품 목록에서 두 개의 상품을 선택한 상태와 장바구니 담기 버튼이 보인다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="shot-card"><figcaption><span class="variant accent">STEP 02B</span><h3>추천상품 · 선택 상태 B</h3><p>가격 배치가 달라진 목록</p></figcaption><button class="image-button" data-full="../assets/images/image-f8a49cad00ce782442e1.png" data-caption="배송비 SAVE · 추천상품 선택 상태 B"><img src="../assets/images/image-f8a49cad00ce782442e1.png" alt="추천상품 목록의 다른 가격 배치 시안과 장바구니 담기 버튼이 보인다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case case-desktop" id="test-04" aria-labelledby="title-04">
+      <div class="page-width">
+        <div class="case-top"><div class="case-no">04<span>/ 04</span></div><div class="case-header"><p class="section-kicker">DESKTOP · RECOMMENDATION</p><h2 id="title-04">추천 노출 팝업</h2><p>메인 화면 위의 같은 자리, 다른 추천 맥락.</p></div><div class="case-type">데스크탑 2안</div></div>
+        <div class="case-insight"><span>비교 관점</span><p>메인 화면 위 추천 영역의 형태를 유지하면서 ‘오늘의 요일특가’와 ‘고객님만을 위한 추천 상품’ 두 콘텐츠 방향을 비교했습니다.</p></div>
+        <div class="desktop-grid">
+          <figure class="desktop-card"><figcaption><span class="variant accent">TEST A / DAY DEAL</span><h3>오늘의 요일특가</h3><p>캠페인 코드와 특가 상품을 강조</p></figcaption><button class="image-button" data-full="../assets/images/image-da19a8e07e5dbcfbe47c.png" data-caption="추천 노출 팝업 · 오늘의 요일특가"><img src="../assets/images/image-da19a8e07e5dbcfbe47c.png" alt="데스크톱 메인 화면 위에 오늘의 요일특가 상품 다섯 개가 펼쳐진 시안이다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+          <figure class="desktop-card"><figcaption><span class="variant accent">TEST B / RECOMMENDATION</span><h3>고객님만을 위한 추천 상품</h3><p>개인화된 추천 메시지를 전면에 배치</p></figcaption><button class="image-button" data-full="../assets/images/image-7ef34d5a67970539d178.png" data-caption="추천 노출 팝업 · 고객님만을 위한 추천 상품"><img src="../assets/images/image-7ef34d5a67970539d178.png" alt="데스크톱 메인 화면 위에 고객님만을 위한 추천 상품 다섯 개가 펼쳐진 시안이다." loading="lazy"></button><span class="zoom-hint">원본 크게 보기 ↗</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"><div class="page-width footer-inner"><div><p class="eyebrow"><span class="orange-square"></span> PROJECT NOTE</p><h2>아이디어를 제안하고,<br>화면으로 만들고,<br><em>코드로 구현했습니다.</em></h2></div><div class="footer-detail"><p>ROLE <strong>아이디어 제안 · 디자인 · 코딩</strong></p><p>PROJECT <strong>나비엠알오 A/B 테스트 4건</strong></p><p>DATA <strong>성과 데이터 미확보</strong></p><small>표시한 비교 관점은 제공된 원본 시안을 바탕으로 정리한 디자인 의도입니다. 실제 실험 결과나 성과를 의미하지 않습니다.</small></div></div><div class="page-width footer-bottom"><span>나비엠알오_AB테스트비교_v03</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+  </main>
+
+  <dialog id="image-dialog" aria-label="원본 시안 확대 보기"><div class="dialog-top"><span id="dialog-caption"></span><button id="dialog-close" aria-label="닫기">닫기 ×</button></div><div class="dialog-scroll"><img id="dialog-image" alt=""></div></dialog>
+  <script>
+const dialog = document.getElementById('image-dialog');
+const dialogImage = document.getElementById('dialog-image');
+const dialogCaption = document.getElementById('dialog-caption');
+document.querySelectorAll('[data-full]').forEach(button => {
+  button.addEventListener('click', () => {
+    dialogImage.src = button.dataset.full;
+    dialogImage.alt = button.querySelector('img').alt;
+    dialogCaption.textContent = button.dataset.caption;
+    document.body.classList.add('modal-open');
+    dialog.showModal();
+  });
+});
+document.getElementById('dialog-close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+dialog.addEventListener('close', () => {
+  document.body.classList.remove('modal-open');
+  dialogImage.removeAttribute('src');
+});
+const navLinks = [...document.querySelectorAll('.site-header nav a')];
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
+  });
+}, { rootMargin: '-25% 0px -55% 0px' });
+document.querySelectorAll('.case').forEach(section => observer.observe(section));
+
+</script>
+<script src="../assets/detail-bridge.js"></script>
+</body>
+</html>

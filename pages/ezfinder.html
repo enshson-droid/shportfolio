@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a3a">
+  <title>이지파인더</title>
+  <style>
+    @font-face { font-family: 'Pretendard JP'; src: url(../assets/fonts/font-b14698ed6d82737f45e9.ttf) format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'Pretendard JP'; src: url(../assets/fonts/font-b6f14d5848f95bc50f28.ttf) format('truetype'); font-weight: 700; font-display: swap; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #f7faff; color: #fff; font-family: 'Pretendard JP', sans-serif; }
+    button:focus-visible { outline: 3px solid #acd2ff; outline-offset: 3px; }
+    main { position: relative; max-width: 1920px; margin: 0 auto; box-shadow: 0 25px 80px rgba(0,0,0,.3); }
+    #portfolio { display: block; width: 100%; height: auto; }
+    .hotspot { position: absolute; z-index: 2; padding: 0; border: 3px solid transparent; border-radius: 12px;
+      background: transparent; cursor: zoom-in; }
+    .hotspot:hover, .hotspot:focus-visible { border-color: #4b9cff; background: rgba(38,107,238,.1);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.75); outline: none; }
+    .overlay[hidden] { display: none; }
+    .overlay { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 24px;
+      background: rgba(3,13,34,.84); backdrop-filter: blur(7px); }
+    .popup { display: flex; flex-direction: column; width: min(94vw, 1500px); max-height: 92vh;
+      overflow: hidden; border: 1px solid #4878b5; border-radius: 18px; background: #0b244e;
+      box-shadow: 0 30px 100px rgba(0,0,0,.5); }
+    .popup-head { display: flex; flex: none; justify-content: space-between; align-items: center; gap: 20px;
+      padding: 15px 20px; border-bottom: 1px solid #315584; color: #fff; font-size: 17px; font-weight: 700; }
+    .close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+      border: 1px solid #6b98cf; border-radius: 12px; background: #1f579f; color: white;
+      font-size: 27px; line-height: 1; }
+    .popup-body { display: grid; place-items: center; min-height: 0; overflow: auto; background: #eaf3ff; }
+    #popup-image { display: block; width: auto; max-width: 100%; max-height: calc(92vh - 80px); height: auto; object-fit: contain; }
+    @media (max-width: 600px) { .overlay { padding: 12px; } .popup-head { font-size: 14px; }
+      .close { width: 40px; height: 40px; } }
+  </style>
+<link rel="stylesheet" href="../assets/detail-frame.css">
+</head>
+<body>
+  <main><img id="portfolio" src="../assets/images/image-08b1fe59abb817871151.png" width="1920" height="8500" alt="이지파인더 UI 디자인 포트폴리오">
+    <button type="button" class="hotspot" data-key="01-2" style="left:8.854167%;top:20.470588%;width:39.062500%;height:5.023529%" aria-label="기본 검색 바 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="01-1" style="left:51.041667%;top:20.470588%;width:39.062500%;height:5.023529%" aria-label="확장된 첫 화면 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="01-3" style="left:8.854167%;top:37.529412%;width:39.062500%;height:5.023529%" aria-label="상태 안내 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="02_" style="left:51.041667%;top:37.529412%;width:39.062500%;height:5.023529%" aria-label="검색 결과 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="03_" style="left:8.854167%;top:54.588235%;width:39.062500%;height:5.023529%" aria-label="검색 인터페이스 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="05_" style="left:51.041667%;top:54.588235%;width:39.062500%;height:5.023529%" aria-label="우클릭 메뉴 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="04-1" style="left:8.854167%;top:71.647059%;width:39.062500%;height:5.023529%" aria-label="일반 설정 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="04-2" style="left:51.041667%;top:71.647059%;width:39.062500%;height:5.023529%" aria-label="단축키와 정보 원본 이미지 크게 보기"></button>
+    <button type="button" class="hotspot" data-key="components" style="left:8.854167%;top:88.352941%;width:39.062500%;height:5.023529%" aria-label="UI 컴포넌트 원본 이미지 크게 보기"></button>
+  </main>
+  <div class="overlay" id="overlay" hidden>
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <div class="popup-head"><span id="popup-title"></span><button class="close" id="close" type="button" aria-label="이미지 팝업 닫기">×</button></div>
+      <div class="popup-body" id="popup-body"><img id="popup-image" alt=""></div>
+    </div>
+  </div>
+  <script>
+    const popupImages = {"01-1":"../assets/images/image-7374338575d68c648380.png","01-2":"../assets/images/image-78c89618260462cc46a5.png","01-3":"../assets/images/image-0db7d316ec35918e6d02.png","02_":"../assets/images/image-3d66a88b39dea7be1d31.png","03_":"../assets/images/image-86bc3e1f4f3fc996acb4.png","04-1":"../assets/images/image-4f349770da7468715608.png","04-2":"../assets/images/image-05caa22b13574d26016b.png","05_":"../assets/images/image-2beb0f41ad75954ca438.png","components":"../assets/images/image-f2023920a05e44ca7aa0.png"};
+    const popupTitles = {"01-2":"기본 검색 바","01-1":"확장된 첫 화면","01-3":"상태 안내","02_":"검색 결과","03_":"검색 인터페이스","05_":"우클릭 메뉴","04-1":"일반 설정","04-2":"단축키와 정보","components":"UI 컴포넌트"};
+    const overlay = document.getElementById('overlay');
+    const popupImage = document.getElementById('popup-image');
+    const closeButton = document.getElementById('close');
+    let previousFocus = null;
+    function openPopup(key) {
+      previousFocus = document.activeElement;
+      popupImage.src = popupImages[key];
+      popupImage.alt = popupTitles[key];
+      document.getElementById('popup-title').textContent = popupTitles[key];
+      document.getElementById('popup-body').scrollTop = 0;
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    }
+    function closePopup() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+      popupImage.removeAttribute('src');
+      if (previousFocus && previousFocus.focus) previousFocus.focus();
+    }
+    document.querySelectorAll('.hotspot').forEach(button =>
+      button.addEventListener('click', () => openPopup(button.dataset.key)));
+    closeButton.addEventListener('click', closePopup);
+    overlay.addEventListener('click', event => { if (event.target === overlay) closePopup(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !overlay.hidden) closePopup(); });
+  </script>
+
+<script>
+(function(){
+  function reportPortfolioFinderScroll(){
+    parent.postMessage({
+      __portfolioFinder:true,
+      type:'scroll',
+      y:window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0
+    }, '*');
+  }
+  window.addEventListener('scroll', reportPortfolioFinderScroll, {passive:true});
+  window.addEventListener('load', reportPortfolioFinderScroll);
+  window.addEventListener('message', function(e){
+    if(!e.data || !e.data.__portfolioFinder) return;
+    if(e.data.type === 'top'){
+      window.scrollTo({top:0, left:0, behavior:'smooth'});
+    }
+  });
+})();
+</script>
+
+<script src="../assets/detail-bridge.js"></script>
+</body>
+</html>
