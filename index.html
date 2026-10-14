@@ -1421,7 +1421,7 @@ body{overflow:hidden;}
 
 /* Apply the embedded Paperlogy faces to portfolio UI and SVG folder text. */
 body{font-family:'Paperlogy',sans-serif;}
-#section-corp .project-card text.folder-label{font-family:'Paperlogy',sans-serif !important;font-weight:800;}
+#section-corp .project-card text.folder-label{font-family:'Paperlogy',sans-serif !important;font-weight:800;font-size:52px !important;}
 </style>
 </head>
 <body>
@@ -2912,7 +2912,6 @@ body{font-family:'Paperlogy',sans-serif;}
 (() => {
   const folderLabels = {"enliple-01":["싹쓰리"],"enliple-02":["이지다운","MO"],"enliple-03":["이지다운","PC"],"enliple-04":["이지파인더"],"enliple-05":["더블래스"],"enliple-06":["iMBC"],"navimro-02":["모바일"],"navimro-03":["법인고객","서비스"],"orange-01":["폴디오"],"orange-02":["폴디오 소개","EN"],"orange-03":["폴디오 소개","KR"],"orange-04":["제품","TOTAL"],"orange-05":["전시회"]};
   const ns = 'http://www.w3.org/2000/svg';
-  const replaced = [];
   for (const card of document.querySelectorAll('#section-corp .project-card')) {
     const lines = folderLabels[card.dataset.project];
     if (!lines) continue;
@@ -2935,19 +2934,8 @@ body{font-family:'Paperlogy',sans-serif;}
         text.appendChild(part);
       });
       path.replaceWith(text);
-      replaced.push({ text, lines, x, y });
     }
   }
-  document.fonts.ready.then(() => {
-    for (const { text, lines, y } of replaced) {
-      const widest = Math.max(...Array.from(text.children, part => part.getComputedTextLength()));
-      const size = widest > 310 ? Math.floor(52 * 310 / widest) : 52;
-      text.setAttribute('font-size', String(size));
-      Array.from(text.children).forEach((part, index) => {
-        part.setAttribute('y', String(y + (index - (lines.length - 1) / 2) * size * 1.12));
-      });
-    }
-  });
 })();
 </script>
 </body>
